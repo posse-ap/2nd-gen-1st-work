@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Webアプリ開発</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+     <!-- Header Start -->
+     <header class="site-header">
+        <div class="wrapper site-header__wrapper">
+          <img src="https://posse.anti-pattern.co.jp/img/posseLogo.png" alt="" class="photo">
+          <a href="#" class="brand">4th weeks</a>
+          <nav class="nav">
+            <ul class="nav__wrapper">
+            
+              <div class="pop-box">
+                <label for="popup-on"><label for="popup-on"><span class="right">記録・投稿</span><input type="checkbox" name="checkbox"></div></label>
+                <input type="checkbox" id="popup-on">
+                <div class="popup">
+                  <div class="popup-content">
+                     <p>学習日：<br><input type="text"></p>
+                     <p>学習コンテンツ：<br><input type="checkbox" name="riyu1" value="1" checked="checked">N予備校
+                                           <input type="checkbox" name="riyu1" value="2">ドットインストール
+                                           <input type="checkbox" name="riyu1" value="3">POSSE課題</p>
+                     <p>学習言語：<br><input type="checkbox" name="riyu2" value="HTML">HTML<br>
+                                    　<input type="checkbox" name="riyu2" value="CSS">CSS<br>
+                                    　<input type="checkbox" name="riyu2" value="JS">JavaScript<br>
+                                    　<input type="checkbox" name="riyu2" value="PHP">PHP<br>
+                                    　<input type="checkbox" name="riyu2" value="Lavavel">Lavavel<br>
+                                    　<input type="checkbox" name="riyu2" value="SQL">SQL<br>
+                                      <input type="checkbox" name="riyu2" value="SHELL" >SHELL<br>
+                                      <input type="checkbox" name="riyu2" value="Imfomation">情報システム基礎知識（その他）<br></p>
+                     
+                     <p>Twitter用コメント：<br><input type="text"></p>
+                     <input type="checkbox"　name="share" value="twitter">twitterにシェアする
+                     <button class="button">投稿・記録</button>
+                  </div>
+                  <label for="popup-on"><div class="btn-close">×</div></label>
+                </div>
+        </div>
+             
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Header End -->
+    <div>
+        <p class="box">Today 3 hour</p></div>
+        <p class="box">Month 120 hour</p></div>
+        <p class="box">Total 1348 hour</p></div>
+        <img src="http://bellcurve.jp/statistics/wp-body/wp-content/uploads/2018/04/fig2.png" alt="" class="photo">
+        <img src="https://www.becoolusers.com/excel/img/pie-chart02.png" alt="" class="photo">
+        <img src="https://www.becoolusers.com/excel/img/pie-chart02.png" alt="" class="photo">
+    </div>
+<script>
+const clickBtn3 = () => {
+          const textbox = document.getElementById("comment");
+          const inputValue = textbox.value;
+    
+          //テキストボックスの値を使って、出力するメッセージを生成する
+          const output = "入力完了しました。";
+          //出力用のp要素にメッセージを表示
+          alert(output);
+        }
+</script>
+    
+
+</body>
+</html>
