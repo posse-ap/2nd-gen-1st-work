@@ -1,0 +1,245 @@
+
+  img{
+    width:100%;
+  }
+  label{
+    display:block;
+  }
+  label span{
+    display:block;
+    background-color:#01b6ed;
+    color:#fff;
+    width:200px;
+    line-height:40px;
+    border-radius:4px;
+    text-align:center;
+  }
+  label span:hover{
+    cursor:pointer;
+  }
+ 
+  
+  input[type="checkbox"]:checked + #popup{
+    display:block;
+    transition:.2s;
+  }
+.brand{
+    margin-bottom: 10px;
+    text-decoration:none; 
+    color:black;
+}
+
+
+.photo{
+    width: 30%;
+  height: auto;
+  margin:20px;
+}
+
+
+.right {
+    float: right;
+    background-color:linear-gradient(#05FBFF, #1D62F0 ) fixed;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+    border-radius: 20px;
+}
+
+.button{
+    background-color:linear-gradient(#05FBFF, #1D62F0 ) fixed;
+    width:100px;
+    height: 50px;
+    border-radius: 10px;
+}
+.circle{
+    border-radius: 10px;
+}
+.checkbox{
+    -webkit-appearance:checkbox;
+}
+.time-table{
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.Today{
+  color:#4689FF;
+}
+.Month{
+    color:#4689FF;
+}
+.Total{
+    color:#4689FF;
+}
+.study-num{
+color:black;
+font-size: 150%;
+}
+.study-hours{
+  color:#66FFFF;
+}
+.studybox{
+   margin-left:20px ;
+   margin-right: 40px;
+   float: left;
+  padding-top:100px;
+}
+.time{
+    float: left;
+    margin-left: 20px;
+    border:1px solid white;
+    width:200px;
+    height:140px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center 
+}
+.graph{
+    margin-right: 20px;
+    float: left;
+    padding-top:100px;
+}
+.photo1{
+  width: 60%;
+  height: auto;
+  margin:20px;
+  margin-left: 20px;
+  border:1px solid white;
+  width:640px;
+  height:370px;
+  border-radius: 10px;
+  background-color: white;
+  margin-right: 20px;
+}
+.photo2{
+  width: 70%;
+  height: auto;
+  margin:20px;
+  text-align: center
+}
+.graphbox{
+  float: left;
+  margin-left: 20px;
+  border:1px solid white;
+  width:300px;
+  height:550px;
+  border-radius: 10px;
+  background-color: white;
+  margin-right: 20px;
+  text-align: center
+  
+
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    background-color: #f0f8ff;
+  }
+  
+  header {
+    height: 60px;
+    width: 100%;
+    padding: 0px 15px;
+    background-color:white;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+  }
+  
+  .logo {
+    font-size: 25px;
+    display:inline-block;
+    vertical-align:top; 
+  }
+  
+  nav {
+    margin: 0 0 0 auto;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    line-height: 60px;
+    padding: 0 20px;
+  }
+
+  .body{
+      background-color:#EEEEEE;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family:'Avenir','Helvetica, Neue','Helvetica','Arial';
+    height: 5000px;
+  }
+  
+  
+  /* モーダルCSSここから */
+  .modalArea {
+    visibility: hidden; /* displayではなくvisibility */
+    opacity : 0;
+    position: fixed;
+    z-index: 10; /* サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+  }
+  
+  .modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+  }
+  
+  .modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 70%;
+    max-width: 900px;
+    height:600px;
+    padding: 10px 30px;
+    background-color: #fff;
+  }
+  
+  .closeModal {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  
+  .is-show { /* モーダル表示用クラス */
+    visibility: visible;
+    opacity : 1;
+  }
+  /* モーダルCSSここまで */
+  .moji{
+    font-weight :600;
+    font-size: 120%;
+    text-align: left;
+  }
+.fas fa-circle{
+  size:20px;
+  color: blue;
+}
+.action{
+  width:900px;
+  height:900px;
+}

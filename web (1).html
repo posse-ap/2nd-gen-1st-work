@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Webアプリ開発</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<body class="body">
+     <!-- Header Start -->
+     <!--▽▽ヘッダー▽▽-->
+<header>
+
+
+    <div class="logo">
+      <img src="https://posse.anti-pattern.co.jp/img/posseLogo.png" alt="" class="photo"><a href="#"></a>
+    </div>
+
+
+    <nav>
+      <ul>
+      </ul>
+    </nav>
+              <button id="openModal" class="button">投稿・記録</button>
+
+              <!-- モーダルエリアここから -->
+             <section id="modalArea" class="modalArea">
+                <div id="modalBg" class="modalBg"></div>
+                <div class="modalWrapper">
+                <div class="modalContents">
+                    <div>
+                        <p>学習日：<br><input type="date" class="circle" placeholder="2020年10月27日"></p>
+                        <p>学習コンテンツ：<br><input type="checkbox" name="riyu1" value="1">N予備校
+                            <input type="checkbox" name="riyu1" value="2">ドットインストール
+                            <input type="checkbox" name="riyu1" value="3">POSSE課題</p>
+                            <p>学習言語(複数選択可）：<td><input type="checkbox" name="riyu2" value="HTML" class="checkbox">HTML
+                                <input type="checkbox" name="riyu2" value="CSS" class="checkbox">CSS
+                                <input type="checkbox" name="riyu2" value="JS" class="checkbox">JavaScript
+                                <input type="checkbox" name="riyu2" value="PHP" class="checkbox">PHP
+                                <input type="checkbox" name="riyu2" value="Lavavel" class="checkbox">Lavavel
+                                <input type="checkbox" name="riyu2" value="SQL" class="checkbox">SQL
+                                <input type="checkbox" name="riyu2" value="SHELL" class="checkbox">SHELL
+                                <input type="checkbox" name="riyu2" value="Imfomation" class="checkbox">情報システム基礎知識（その他）
+                        </p>
+                    </div>
+                    <div>
+                        <p>学習時間：<br><input type="text" class="circle"></p>
+                        <p>Twitter用コメント：<br><input type="text" class="circle"></p>
+                        <input type="checkbox"　name="share" value="twitter">twitterにシェアする
+                        <button class="button"> <a href="web2.html">投稿・記録</a></button>
+                       
+                    </div>
+                </div>
+                <div id="closeModal" class="closeModal">
+                    ×
+                </div>
+                </div>
+            </section>
+  <!-- モーダルエリアここまで -->
+  
+    </header>
+      <!-- Header End -->
+    <div class="studybox">
+        <Ul class="time-table">
+            <li class="time">
+                <p class="Today">Today</p>
+                <p class="study-num">3</p>
+                <p class="study-hours">hour</p>
+            </li>
+            <li class="time">
+                <p class="Month">Month</p>
+                <p class="study-num">120</p>
+                <p class="study-hours">hour</p>
+            </li>
+            <li class="time">
+                <p class="Total">Total</p>
+                <p class="study-num">1348</p>
+                <p class="study-hours">hour</p>
+            </li>
+        </Ul>
+        <img src="leftgraff.png" alt="" class="photo1">
+    </div>
+    <div class="graph">
+        <div class="graphbox">
+            <p class="moji">学習時間</p>
+            <img src="gengoguraff.png" alt="" class="photo2">
+            <ul>
+                <li>
+                    <p class="fas fa-circle">JavaScript</p>
+                    <p class="fas fa-circle">CSS</p>
+                    <p class="fas fa-circle">PHP</p>
+                    <p class="fas fa-circle">HTML</p>
+                    <p class="fas fa-circle">Laravel</p>
+                    <p class="fas fa-circle">SQL</p>
+                    <p class="fas fa-circle">SHELL</p>
+                    <p class="fas fa-circle">情報システム基礎知識（その他）</p>
+                    
+                </li>
+            </ul>
+        </div>
+        <div class="graphbox">
+            <p class="moji">学習コンテンツ</p>
+            <img src="conteguraff.png" alt="" class="photo2">
+            <ul>
+                <li>
+                    <i class="fas fa-circle">ドットインストール</i>
+                    <i class="fas fa-circle">N予備校</i>
+                    <i class="fas fa-circle">POSSE課題</i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+
+</body>
+<script src="web.js"></script>
+</html>
+
+
+    
