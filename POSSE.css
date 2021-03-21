@@ -1,6 +1,6 @@
 /* 共通部分 */
 body {
-  background-color: #ececec;
+  background-color: #F5F5F8;
   margin: 0;
 }
 
@@ -34,7 +34,7 @@ header img {
 .four {
   margin-left: 20px;
   font-size: 13px;
-  color: rgb(173, 212, 219);
+  color: #97b9d1;
 }
 
 .post {
@@ -42,9 +42,10 @@ header img {
   align-items: center;
   border-radius: 30px;
   width: 170px;
-  background:linear-gradient(-135deg, aqua, blue);
+  background:linear-gradient(-135deg, #3ccfff, #0f71bc);
   box-shadow: 0 5px 5px -2px rgb(110, 225, 245);
   margin-right: 30px;
+  cursor: pointer;
 }
 
 .post p {
@@ -83,10 +84,18 @@ header img {
 
 .period {
   letter-spacing: 1px;
-  color: rgb(20, 81, 222);
+  color: #3378C2;
   font-size: 20px;
   margin: 0;
   margin-top: 20px;
+}
+
+.today {
+  margin-right: 16px;
+}
+
+.month {
+  margin-right: 16px;
 }
 
 .figure {
@@ -96,7 +105,7 @@ header img {
 }
 
 .hour {
-  color: rgb(173, 212, 219);
+  color: #AEC8DA;
   margin: 0;
   margin-bottom: 20px;
   letter-spacing: 1px;
@@ -123,7 +132,15 @@ header img {
   margin-top: 20px;
 }
 
-.circle div {
+.language {
+  background-color: white;
+  margin-left: 20px;
+  border-radius: 10px;
+  width: 50%;
+  box-shadow: 2px 2px 5px rgb(173, 172, 172);
+}
+
+.content {
   background-color: white;
   margin-left: 20px;
   border-radius: 10px;
@@ -162,31 +179,31 @@ header img {
 }
 
 .lang-list1::before {
-  background: #2b4cdd;
+  background: #0345EC;
 }
 
 .lang-list2::before {
-  background: #365391;
+  background: #0F71BD;
 }
 
 .lang-list3::before {
-  background: #0bb1ce;
+  background: #20BDDE;
 }
 
 .lang-list4::before {
-  background: #1cf0ff;
+  background: #3CCEFE;
 }
 
 .lang-list5::before {
-  background: #d4b4ff;
+  background: #B29EF3;
 }
 
 .lang-list6::before {
-  background: #5500b6;
+  background: #4A17EF;
 }
 
 .lang-list7::before {
-  background: #421ccc;
+  background: #3105C0;
 }
 
 .lang-list8::before {
@@ -219,57 +236,91 @@ header img {
 }
 
 .cont-list1::before {
-  background: #2b4cdd;
+  background: #0345EC;
 }
 
 .cont-list2::before {
-  background: #365391;
+  background: #0F71BD;
 }
 
 .cont-list3::before {
-  background: #0bb1ce;
+  background: #20BDDE;
 }
 
 
 /* した */
 .change {
-  /* display: inline-block; */
   text-align: center;
   font-weight: bold;
   margin-top: 20px;
-  /* position: relative; */
-  /* padding-left: 20px; */
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* .change::after{
+.change::before,
+.change::after,
+.change > div::before,
+.change > div::after {
+  position: absolute;
   content: '';
-  width: 6px;
-  height: 6px;
-  border: 0px;
-  border-top: solid 2px #5bc0de;
-  border-right: solid 2px #5bc0de;
-  -ms-transform: rotate(45deg);
+  width: 2px;
+  height: 50%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.change::before {
+  top: 0;
+  left: 40%;
+  margin-top: 4px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -4px;
-} */
+  background-color: #0f71bc;
+}
 
+.change::after {
+  bottom: 0;
+  left: 40%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: #0f71bc;
+}
 
+.change > div::before {
+  top: 0;
+  right: 40%;
+  margin-top: 4px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  background-color: #97b9d1;
+}
+
+.change > div::after {
+  bottom: 0;
+  right: 40%;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #97b9d1;
+}
+
+.postSP {
+  display: none;
+}
 
 /* ポップアップ */
 .popup {
-  position: fixed;
-  left: 0;
-  top: 0;
+  /* position: fixed;
+  right: 0;
+  bottom: 0; */
   width: 100%;
   height: 100%;
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
   transition: .6s;
+
 }
 
 .popup.is-show {
@@ -284,34 +335,45 @@ header img {
   transform: translate(-50%,-50%);
   width: 900px;
   width: 80%;
+  height: 80%;
   padding: 50px;
   background-color: #fff;
   z-index: 2;
   border-radius: 30px;
-}
-
-.popup-inner img {
-  width: 100%;
+  /* margin: 50px; */
 }
 
 .close-btn {
   position: absolute;
   right: 0;
   top: 0;
-  width: 50px;
-  height: 50px;
   line-height: 50px;
   text-align: center;
   cursor: pointer;
+  padding: 5px;
+  /* width: 50px;
+  height: 50px; */
+  color: #333;
+  align-items: center;
+  vertical-align: middle;
 }
 
 .close-btn i {
   font-size: 20px;
-  color: #333;
+  background-color: #f5f5f8;
+  border-radius: 50%;
+  margin: 5px;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  vertical-align: middle;
+  align-items: center;
+  padding: 15px;
+  
 }
 
 .black-background {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -355,6 +417,7 @@ header img {
   margin: 0 auto;
   text-align: center;
   padding: 5px;
+  cursor: pointer;
 }
 
 .modal-post p {
@@ -364,11 +427,12 @@ header img {
 }
 
 #study-date {
-  background-color: #ececec;
+  background-color: #F5F5F8;
   border: none;
   border-radius: 5px;
   width: 100%;
   height: 60px;
+  margin: 0 auto;
 }
 
 .modal label, .modal h1 {
@@ -382,7 +446,8 @@ header img {
 }
 
 .study-content div {
-  margin: 5px;
+  margin: 0;
+  margin-right: 5px;
 }
 
 .study-content-label {
@@ -390,9 +455,12 @@ header img {
   display: flex;
   align-items: center;
   cursor: pointer;
-  background: rgba(0,0,0,.05);
+  background: #F5F5F8;
   border-radius: 50px;
   width: fit-content;
+  margin: 0;
+  /* margin-bottom: 8px; */
+  /* line-height: 1; */
 }
 
 .SCL-Input {
@@ -405,16 +473,16 @@ header img {
   background: #0F71BD;
 }
 
-label + input[type=checkbox]:checked {
+.study-content-label + input[type=checkbox]:checked {
   background: green;
-}
+} */
 
 .SCL-Input:checked + .SCL-DummyInput{
   background: #0F71BD;
-} */
+}
 
 .SCL-Input:checked + .study-content-label {
-  background: #E7F5FF;
+  background: #F5F5F8;
 }
 
 .SCL-Input:checked, .SCL-DummyInput::before {
@@ -467,7 +535,7 @@ label + input[type=checkbox]:checked {
 
 
 #study-hour {
-  background-color: #ececec;
+  background-color: #F5F5F8;
   border: none;
   border-radius: 5px;
   width: 100%;
@@ -475,7 +543,7 @@ label + input[type=checkbox]:checked {
 }
 
 #comment {
-  background-color: #ececec;
+  background-color: #F5F5F8;
   border: none;
   border-radius: 5px;
   width: 100%;
@@ -548,7 +616,10 @@ label + input[type=checkbox]:checked {
 /* 完了画面 */
 .awesome-page {
   text-align: center;
-  margin: 70px;
+  margin: 150px;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
 }
 
 .awesome {
@@ -565,7 +636,7 @@ label + input[type=checkbox]:checked {
 
 .checked p {
   color: white;
-  font-size: 50px;
+  font-size: 45px;
   margin: 0;
   position: relative;
 }
@@ -612,4 +683,141 @@ label + input[type=checkbox]:checked {
   color: white;
   font-size: 50px;
   margin: 0;
+}
+
+
+@media (max-width: 855px) {
+
+  .popup-inner {
+    margin: 30px auto;
+    position: absolute;
+    height: 100%;
+  }
+}
+
+
+@media (max-width: 750px){
+
+  .post {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .pc {
+    display: block;
+    margin: 20px;
+    
+  }
+
+  .pcLeft {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .circle {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .language {
+    margin: 0;
+    margin-top: 16px;
+  }
+
+  .content {
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+
+  .content {
+    width: 50%;
+  }
+
+  .postSP {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    border-radius: 30px;
+    height: 50px;
+    background:linear-gradient(-135deg, #3ccfff, #0f71bc);
+    box-shadow: 0 5px 5px -2px rgb(110, 225, 245);
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .postSP p {
+    color: white;
+    margin: auto auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* 下の10月の隣の矢印たち */
+
+  .change::before, .change::after {
+    left: 30%;
+  }
+
+  .change > div::before, .change > div::after {
+    right: 30%;
+  }
+
+  /* ポップアップ */
+  .popup {
+    /* position: absolute; */
+    /* left: 0; */
+    align-items: flex-end;
+    /* top: 100%; */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .popup-inner {
+    position: absolute;
+    /* top: 200px; */
+    top: 35vh;
+    left: 50%;
+    /* bottom: 1000%; */
+    right: 0;
+    margin-top: 80%;
+    margin-bottom: 0;
+    width: 100%;
+    height: 1000px;
+    padding: 0;
+    padding-top: 50px;
+    background-color: #fff;
+    z-index: 2;
+    border-radius: 30px 30px 0 0;
+    /* margin: 50px; */
+  }
+
+
+  /* モーダル */
+  .modal {
+    display: block;
+    padding: 0 20px;
+  }
+
+  .modalR {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .modalL {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .modalL div, .modalR div {
+    margin-bottom: 20px;
+  }
+  
 }

@@ -1,3 +1,4 @@
+// PCのポップアップ
 function popupImage() {
   var popup = document.getElementById('js-popup');
   if(!popup) return;
@@ -5,6 +6,7 @@ function popupImage() {
   var blackBg = document.getElementById('js-black-bg');
   var closeBtn = document.getElementById('js-close-btn');
   var showBtn = document.getElementById('post');
+  var showBtnSP = document.getElementById('postSP');
 
   closePopUp(blackBg);
   closePopUp(closeBtn);
@@ -15,8 +17,21 @@ function popupImage() {
       popup.classList.toggle('is-show');
     });
   }
+  
+  
+  // スマホ版対応
+  closePopupSP(showBtnSP);
+  function closePopupSP(elem) {
+    if(!elem) return;
+    elem.addEventListener('click', function() {
+      popup.classList.toggle('is-show');
+    });
+  }
 }
 popupImage();
+
+
+
 
 function newPopupImage() {
   var newPopup = document.getElementById('new-js-popup');
