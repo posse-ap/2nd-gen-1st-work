@@ -1,0 +1,54 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  align-items: center;
+}
+
+.top-1 {
+  display: flex;
+}
+
+.top img {
+  width: 200px
+}
+
+.mainimage2{
+  text-align:center;
+  background-color:#f0f0f0;
+  min-height: 100vh;
+}
+
+.circle{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgb(255, 170, 131);
+  text-align:center;
+  line-height: 80px;
+}
+
+.error{
+  width:50%;
+  display:inline-block;
+}
+
+.error p{
+  color:rgb(255, 170, 131);
+  display: inline-block;
+  margin:5px;
+  right: 5px;
+}
+
+.error span{
+  color:aliceblue;
+  font-size:50px;
+}
+
+.mainbox{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

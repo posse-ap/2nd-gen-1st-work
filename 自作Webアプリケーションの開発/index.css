@@ -49,6 +49,7 @@
   background-color: white;
   text-align:center;
   line-height:5px; 
+  box-shadow: 10px 10px 45px -28px;
 }
 
 .one {
@@ -84,20 +85,41 @@
   margin:20px;
 }
 
-.learnbox {
+.item ul li{
+	display: inline-block;
+	margin-left: 10px;
+}
+
+li{
+  position: relative;
+  list-style: none;
+}
+
+/* li :before {
+  content: "";
+  position: absolute; 
+  width: 15px;
+  height: 15px;
+  background-color: #266cf8;
+  border-radius: 50%;
+}  */
+
+li:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left:0px;
+  background-color: #266cf8;
+  border-radius: 50%;
+}
+
+.learnbox1 {
   background-color: white; 
   margin: 10px;
   width:300px;
   border-radius: 5px;
-}
-
-.item-list {
-  color:aqua;
 } 
-
-.item-list span {
- color:black;
-}
 
 .fotter {
   background-color:#f0f0f0;
@@ -110,3 +132,6 @@
   margin-left:15px;
 }
 
+.item{
+  display: inline-block;
+}
