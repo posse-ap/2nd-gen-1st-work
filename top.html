@@ -9,49 +9,89 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
   <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 </head>
+
 <body>
-  <div class="container" id="home"></div>
+  <div class="container" id="top">
     <header>
-      <a href="top.html#home"><img src="./img/posseLogotouka.png"></a>
+      <a href="top.html#"><img src="./img/posseLogotouka.png"></a>
       <p>4th week</p>
-      <a href="top.html#record">記録・投稿</a>
+      <button class="btn" type="submit">記録・投稿</button>
     </header>
 
-    <div class = "left">
-      <div class = "time">
-        <div id = "today">
-          today<b>3<>hour
+    <div class="contents">
+      <div class = "left">
+        <div class = "time">
+            <div id = "time-item">
+              <h2 class="period">Today</h2>
+              <p class="figure">3</p>
+              <p class="hour">hour</p>
+            </div><!--today-->
+            <div id = "time-item">
+              <h2 class="period">Month</h2>
+              <p class="figure">120</p>
+              <p class="hour">hour</p>
+            </div><!--month-->
+            <div id = "time-item">
+              <h2 class="period">Total</h2>
+              <p class="figure">1348</p>
+              <p class="hour">hour</p>
+            </div><!--total-->
+          </div><!--time-->
+          <div class = "bar">
+            棒グラフ
+          </div>
+        </div><!--left-->
+
+      <div class="right">
+        <div class="lerning">
+          <div class="lerning-title">
+              学習言語
+          </div>
+          <div class = "pie">
+            円グラフが入るよ
+          </div>
+          <div class="lerning-item">
+            <ul class="item-list">
+              <p>
+                <li class="item"><span>Javascript</span></li>
+                <li class="item"><span>CSS</span></li>
+                <li class="item"><span>PHP</span></li>
+              </p>
+              <p>
+                <li class="item"><span>HTML</span></li>
+                <li class="item"><span>Laravel</span></li>
+                <li class="item"><span>SQL</span></li>
+              </p>
+              <p>
+                <li class="item"><span>SHELL</span></li>
+                <li class="item"><span>情報システム基礎知識(その他)</span></li>
+              </p>
+            </ul>
+          </div>
         </div>
-        <div id = "month">Month</div>
-        <div id = "total">Total</div>
-      </div>
 
-      <div class = "bar">
-        棒グラフ
-      </div>
-    </div>
+        <div class="lerning">
+          <div class="lerning-title">
+            学習コンテンツ
+          </div>
+          <div class = "pie">
+          </div>
+          <div class="lerning-item">
+            <ul>
+              <li>ドットインストール</li>
+            　<li>N予備校</li>
+            　<li>POSSE課題</li>
+            </ul>
+          </div>
+        </div>
+      </div><!--right-->
+  
+  </div><!--container-->
 
-    <div class = "pie">
-      <div class="ct-chart"　id="chart1">
-        学習コンテンツ
-      </div>
-      <div class="" id="chart2">
-        学習言語
-        <svg class="circle" width="280" height="280">
-          <circle class="type type4 typeA4" cx="140" cy="140" r="90"></circle>
-          <circle class="type type3 typeA3" cx="140" cy="140" r="90"></circle>
-          <circle class="type type2 typeA2" cx="140" cy="140" r="90"></circle>
-          <circle class="type type1 typeA1" cx="140" cy="140" r="90"></circle>
-        </svg>
-      </div>
-    </div>
+  <footer>
+    <p>2020年 10月</p>
+  </footer>
 
-      <div class = "move"></div>
-
-      <div class = record id ="record">
-        <div style="position:absolute; left:20px; top:20px; background-color:#fbff96;">レイヤーです。</div>
-      </div>
-
-<script src = index.js></script>
+  <script src = index.js></script>
 </body>
 </html>

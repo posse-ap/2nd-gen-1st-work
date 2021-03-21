@@ -18,48 +18,117 @@ header a{
   padding: 0 5px;
 }
 
-.time{
+.contents{
+  background-color:#f0f0f0;
   display:flex;
+  padding:20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.top {
+  display: flex;
   justify-content: space-between;
+  margin: 10px;
   align-items: center;
 }
 
-#today{
-  border: 1px solid #ebebeb;
-  padding: 13px;
-  margin: 10px 0;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 3px 2px -2px rgba(0,0,0,.13);
-}
-#month{
-  border: 1px solid #ebebeb;
-  padding: 13px;
-  margin: 10px 0;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 3px 2px -2px rgba(0,0,0,.13);
-}
-#total{
-  border: 1px solid #ebebeb;
-  padding: 13px;
-  margin: 10px 0;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 3px 2px -2px rgba(0,0,0,.13);
-}
-
-
-.pie{
+.top-1 {
   display: flex;
 }
 
-.circle{
-  display:inline-block;
-  transform:rotate(-90deg);
-  background-color: #000;
+.top img {
+  width: 200px
 }
-.circle .type{
-  fill:transparent;
-  stroke-width:100;
+
+.btn {
+ color:white;
+ background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+ border-radius: 100px;
+ text-decoration: none;
+ border: none;
+ width: 180px;
+ height:45px;
+}
+
+.time {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time-item {
+  padding: 20px;
+  margin: 10px;
+  width: 140px;
+  border-radius:  5px;
+  background-color: white;
+  text-align:center;
+  line-height:5px; 
+}
+
+.period {
+  color:#0f71bc
+}
+
+.hour {
+ color:#97B9D1
+}
+
+.bar {
+  background-color: white;
+  height:60%;
+  margin:20px;
+  padding:20px;
+  border-radius: 5px;
+}
+
+.pie {
+  background-color: white;
+  margin:10px;
+  height:250px;
+}
+
+.right {
+  display: flex;
+  padding: 10px;
+  width:50%;
+}
+
+.left {
+  width:50%; 
+  margin:20px;
+}
+
+.learning {
+  background-color: white; 
+  margin: 10px;
+  width:300px;
+  border-radius: 5px;
+}
+
+.item-list {
+  color:aqua;
+} 
+
+.item-list span {
+ color:black;
+}
+
+.fotter {
+  background-color:#f0f0f0;
+  margin: 0px;
+  text-align: center; 
+  height: 50px;
+}
+
+.title {
+  margin-left:15px;
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+.contents{
+  display: block;
+}
 }
