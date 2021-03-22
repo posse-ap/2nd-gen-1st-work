@@ -9,8 +9,13 @@ header{
 }
 
 h1{
+  width: 100%;
   margin: 0;
   height: 64px;
+}
+
+.week{
+  font-size: small;
 }
 
 .posselogo{
@@ -21,6 +26,7 @@ h1{
 
 .button{
   float: right;
+  align-items: center;
   width: 150px;
   height: 30px;
   margin: 18px 30px;
@@ -29,23 +35,45 @@ h1{
   box-shadow: 10px 10px;
   border: 10px;
   color: #ffff;
+  cursor: pointer;
 }
 
 /* 左右二分割 */
 .container{
+  /* box-sizing: border-box; */
+  /* max-width: 1200px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* .items, .bargraph, .languages, .contents{
+  box-sizing: border-box;
+  width: 100%;
+} */
+
+.left, .right{
+  margin: 10px;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
 }
 
 /* 勉強時間入力場所三分割 */
 .items{
   display: inline-block;
+  justify-content: space-around;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 0;
+  text-align: center;
 }
 
-li{
+.studytimeoftoday, .studytimeofmonth, .studytimeoftotal{
   list-style: none;
   padding: 0.5em 1em;
   margin: 20px 10px;
@@ -56,13 +84,120 @@ li{
   text-align: center;
 }
 
-.graphofstudytime{
-  margin: 0 10px;
+.bargraph{
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
 }
 
+/* 右側 */
 .right{
-  display: block;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+h2{
+  font-size: 100%;
+}
+.languages, .contents{
+  list-style: none;
+  padding: 20px;
+  margin-left: 0px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #FFF;
+  border: solid 3px #ffff; /*線*/
+  border-radius: 10px; /*角の丸み*/
+  text-align: left;
+  align-self: stretch;
+}
+
+.circlegraph{
+  width: 100%;
+  height: auto;
+}
+
+footer{
+  height: 64px;
+}
+
+.footer{
+  text-align: center;
+  font-size: x-small;
+  padding-top: 5px;
+}
+
+/* 凡例 */
+.languages1, .languages2, .languages3, .languages4, .languages5, .languages6, .languages7, .languages8, .contents1, .contents2, .contents3{
+  list-style-type: none;
+  display: inline;
+  margin: 2px;
+  padding: 0;
+  background: white;
+  width: 300px;
+  font-size: small;
+}
+
+/*リストの各要素に前要素として■を付ける*/
+.languages1::before, .languages2::before, .languages3::before, .languages4::before, .languages5::before, .languages6::before, .languages7::before, .languages8::before, .contents1::before, .contents2::before, .contents3::before{
+  content: "";
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin-right: 5px;
+}
+
+/*リストの各要素の前要素のデザインを設定*/
+li.languages1:before {
+  background: #1754ef;
+  border-radius:70%;
+}
+li.languages2:before {
+  background: #2171bd;
+  border-radius:70%;
+}
+li.languages3:before {
+  background: #4dbdde;
+  border-radius:70%;
+}
+li.languages4:before {
+  background: #54cef9;
+  border-radius:70%;
+}
+li.languages5:before {
+  background: #b29ef3;
+  border-radius:70%;
+}
+li.languages6:before {
+  background: #6d46ec;
+  border-radius:70%;
+}
+li.languages7:before {
+  background: #4f45ef;
+  border-radius:70%;
+}
+li.languages8:before {
+  background: #3636c1;
+  border-radius:70%;
+}
+li.contents1:before {
+  background: #1754ef;
+  border-radius:70%;
+}
+li.contents2:before {
+  background: #2171bd;
+  border-radius:70%;
+}
+li.contents3:before {
+  background: #4dbdde;
+  border-radius:70%;
+}
+
+ul{
+  padding-top: 16px;
+  padding-left: 0;
   margin: 0;
 }

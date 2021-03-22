@@ -1,0 +1,59 @@
+h2{
+  font-weight: normal;
+  font-size: 90%;
+  font-weight: bold;
+  margin: 5px;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+form{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 64px;
+}
+
+.left{
+  margin-left: 56px;
+  margin-right: 20px;
+}
+
+.right{
+  margin-left: 20px;
+  margin-right: 56px;
+}
+
+/* 入力欄 */
+#date, #time, #comment{
+  background-color: #f5f4f9;
+  border: none;
+  border-radius: 0.5em;
+  width: 80%;
+}
+
+#date, #time{
+  padding: 0.5em;
+  box-sizing: border-box;
+  margin: 0.5em auto;
+  line-height: 3;
+}
+
+#comment{
+  padding: 0.5em;
+  box-sizing: border-box;
+  margin: 0.5em auto;
+  line-height: 15;
+}
+
+/* ラジオボタン */
+input[type="radio"]{
+  margin-left: 10px;
+}

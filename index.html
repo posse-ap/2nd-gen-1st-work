@@ -9,12 +9,15 @@
 </head>
 <body>
   <!-- ヘッダー -->
-  <header>
-    <h1 class="header">
-      <img src="./posselogo.jpg" alt="posseロゴ" class="posselogo">
-      <button type="menu" class="button">記録・投稿</button>
-    </h1>
-  </header>
+<header>
+  <h1 class="header">
+    <img src="./posselogo.jpg" alt="posseロゴ" class="posselogo">
+    <!-- <h2 class="week">4th week</h2> -->
+    <a href="modal.html">
+    <button type="menu" class="button">記録・投稿</button>
+    </a>
+  </h1>
+</header>
 <div class="container">
   <div class="left">
     <div class="items">
@@ -35,28 +38,52 @@
         </li>
     </div>
       <!-- グラフ -->
-      <div class="graphofstudytime">
-        <img src="./graph1.png" alt="棒グラフ">
+      <div class="divofbargraph">
+        <img src="./graph1.png" alt="棒グラフ" class="bargraph">
       </div>
   </div>
     <div class="right">
       <!-- 学習言語グラフ -->
       <div class="languages">
-        <li>
-          <p>学習言語</p>
-          <p></p>
-          <p></p>
-        </li>
+        <div class="gakushugengo">
+          <h2>学習言語</h2>
+        </div>
+        <div>
+          <img src="./graph2.png" alt="円グラフ1" class="circlegraph">
+        </div>
+        <div>
+          <ul>
+            <li class="languages1">Javascript</li>
+            <li class="languages2">CSS</li>
+            <li class="languages3">PHP</li><br>
+            <li class="languages4">HTML</li>
+            <li class="languages5">Laravel</li>
+            <li class="languages6">SQL</li><br>
+            <li class="languages7">SHELL</li><br>
+            <li class="languages8">情報システム基礎知識(その他)</li>
+          </ul>
+        </div>
       </div>
       <!-- 学習コンテンツグラフ -->
       <div class="contents">
-        <li>
-          <p>学習コンテンツ</p>
-          <p></p>
-          <p></p>
-        </li>
+        <div class="gakushucontents">
+          <h2>学習コンテンツ</h2>
+          <div>
+            <img src="./graph3.png" alt="円グラフ2" class="circlegraph">
+          </div>
+          <ul>
+            <li class="contents1">ドットインストール</li>
+            <li class="contents2">N予備校</li><br>
+            <li class="contents3">POSSE課題</li>
+          </ul>
+        </div>
       </div>
     </div>
 </div>
+<footer>
+  <div class="footer">
+    <h2> < 2010年　10月 > </h2>
+  </div>
+</footer>
 </body>
 </html>
