@@ -38,7 +38,7 @@ main{
   margin: 20% auto;
 }
 
-#error{
+.error{
   color: #F3BD67;
 }
 
@@ -48,4 +48,32 @@ main{
 }
 .size::before{
   color:#F3BD67;
+}
+
+
+
+@media screen and (max-width:750px){
+  html{
+    min-width: 400px;
+    margin-left:auto;
+    margin-right:auto;
+    width:100vw;
+    height:100vh;
+} 
+
+.body{
+    min-width: 400px;
+    width: 100vw;
+    height:100vh;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.error{
+  font-size: large;
+}
+
+.size{
+  font-size: 7em;
+}
 }
