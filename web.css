@@ -103,14 +103,7 @@ input, select {
 
 
 
-body{
-    background-color: whitesmoke;
-    margin:0%;
-}
-header{
-    width:100%;
 
-}
 
 /* ---------------------------ここから本文------------------------------------ */
 @media print,screen and (min-width: 640px){
@@ -123,17 +116,24 @@ header{
 
 header{
     box-sizing: border-box;
-    height: 55px;
+    height: 64px;
     width:100%;
     background-color: white;
+    align-items: center;
+    display: flex;
 } 
     
 
 .header_img{
-    padding-top: 2px;
+    /* padding-top: 2px; */
 
     /* padding-bottom: 0px; */
     margin:2px;
+}
+.week{
+    color:silver;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 .button{
     color:white;
@@ -274,8 +274,18 @@ main{
     margin: 10px 0 10px 0;
 }
 /* .lang_content{
-    padding:10px;
+    display: inline;
 } */
+ul{
+    padding:10px;
+    
+}
+li{
+    display: inline;
+}
+.a{
+    display: flex;
+}
 footer{
     background-color: whitesmoke;
     /* margin: 0 auto; */
