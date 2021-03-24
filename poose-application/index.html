@@ -7,6 +7,34 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="posse.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var query = new google.visualization.Query('http://posse-task.anti-pattern.co.jp/1st-work/study_language.json');
+        query.send(handleQueryResponse);
+      }
+
+      function handleQueryResponse(response) {
+            //データの準備
+            var data = response.getDataTable();
+
+        var options = {
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+    <link rel="stylesheet" href="//unpkg.com/flatpickr/dist/flatpickr.min.css">
+    <!-- カスタムテーマ -->
+    <link rel="stylesheet" href="//unpkg.com/flatpick/dist/themes/airbnb.css">
+    <script src="//unpkg.com/flatpickr"></script>
+    <!-- 日本語の言語ファイル -->
+    <script src="//unpkg.com/flatpickr/dist/l10n/ja.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -19,10 +47,11 @@
                 <span>4th week</span>
             </div>
         </div>
-        <span class="shadow-lg p-3 btn_submit" id="r_p_btn">
+        <span class="shadow-lg p-3 btn_submit" id="openModal">
             記録・投稿
         </span>
     </header>
+    
     <main class="main">
         <div class="studying_hour">
             <div class="studying_letter">
@@ -49,7 +78,8 @@
         <div class="studying_graf">
             <div class="badge bg-white text-dark l_a_card">
                 <h1 class="study_l_c">学習言語</h1>
-                    <img src="./img/gengoguraff.png" alt="言語" class="doughnut_lang">
+                    <div id="donutchart" class="doughnut_lang" ></div>
+                    
                         <div class="kinds_lang_wrapper">                    
                             <div><i class="fas fa-circle js_circle"></i>JavaScript</div>
                             <div><i class="fas fa-circle css_circle"></i>CSS</div>
@@ -71,10 +101,14 @@
                         </div>
             </div>
         </div>
-        <!-- もーだるしょり -->
-        <div class="popup" id="popup">
-            <div class="popup_inner" id="popup_inner">
-                <div class="close-btn" id="js-close-btn">
+
+        
+       
+          <!-- モーダルエリアここから -->
+          <section id="modalArea" class="modalArea">
+            <div id="modalBg" class="modalBg"></div>
+            <div class="modalWrapper" id="modal_inner">
+                <div class="close-btn" id="closeModal">
                     <span class="fa-stack">
                     <i class="fas fa-stack-2x fa-circle" style="color:#F5F4F8"></i>
                     <i class="fas fa-stack-1x fa-times"></i>
@@ -83,7 +117,7 @@
                 <div class="popup_form">
                     <div class="popup_left">
                         <h5>学習日</h5>
-                        <input type="text" value="2020年10月27日" class="learning_date_time">
+                        <input type="text" id="calendar" class="learning_date_time" data-mindate=today  placeholder="Select Date.." readonly="readonly">
                         <h5>学習コンテンツ（複数選択可）</h5>
                         <div class="lang_cont_wrap">
                                 <div class="check_box_wrap"><input type="checkbox" class="check_box"><span>N予備校</span></div>
@@ -112,13 +146,14 @@
                     </div>
                 </div>
                 <div class="btn_submit_modal_wrap">
-                    <i class="shadow-lg p-3 btn_submit_modal" id="r_p_done_btn">
+                    <i class="shadow-lg p-3 btn_submit_modal" id="r_p_done_btn" onclick="r_p_done()">
                         記録・投稿
                     </i>
                 </div>
             </div>
-            <div class="black-background" id="js-black-bg"></div>
-        </div>
+            </div>
+          </section>
+          <!-- モーダルエリアここまで -->
     
     </main>
     <footer class="footer">
@@ -127,10 +162,11 @@
         <i class="fas fa-chevron-right"></i>
     </footer>
     <div class="btn_submit_s_wrap">
-        <span class="shadow-lg p-3 btn_submit_s" id="r_p_s_btn">
+        <span class="shadow-lg p-3 btn_submit_s" id="openModal">
             記録・投稿
         </span>
     </div>
     <script src="posse.js"></script>
+    <script src="calendar.js"></script>
 </body>
 </html>

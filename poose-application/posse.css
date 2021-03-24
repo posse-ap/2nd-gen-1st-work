@@ -43,7 +43,7 @@ body{
         height:auto;
     }
     .btn_submit{
-        display:none;
+        visibility:hidden;
     }
 }
 
@@ -345,63 +345,119 @@ body{
 }
 
 /* もーだるしょり */
-.popup{
-    position:fixed;
-    left: 0;
+.modalArea {
+    visibility: hidden; 
+    opacity : 0;
+    position: fixed;
+    z-index: 10; 
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 9999;   
-    opacity: 0;
-    visibility: hidden;
-    transition: .6s;    
-}
-
-.popup.is-show {
-    opacity: 1;
+    transition: .4s;
+  }
+  
+  .modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+  }
+  
+  
+  
+  .closeModal {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  
+  .is-show { /* モーダル表示用クラス */
     visibility: visible;
+    opacity : 1;
   }
 
-.popup_inner{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 80%;
-    max-width: 900px;
-    height:80%;
-    padding-top: 50px;
-    background-color: #fff;
-    z-index: 24;
-    border-radius:40px;
+@media screen and (min-width:768px){
+    .modalWrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 80%;
+        max-width: 900px;
+        height:80%;
+        padding-top: 50px;
+        background-color: #fff;
+        border-radius:40px;
+        overflow: auto;
+      }
+
+    .popup_form{
+        display:flex;
+    }
+
+    .close-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .popup_left{
+        width:374px;
+        margin-right:40px;
+        margin-left:56px;
+    }
+
 }
+@media screen and (max-width:767px){
+    .modalWrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        margin-top:74px;
+        width: 100%;
+        height:100%;
+        padding: 50px 0 20px 20px;
+        background-color: #fff;
+        border-radius:30px 30px 0 0;
+        overflow: auto;
+      }
+
+    .popup_form{
+        display:block;
+    } 
+
+    .close-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top:20px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .popup_left{
+        width:auto;
+        margin-right:0;
+        margin-left:0;
+    }
+
+}
+
 
 .popup_form h5{
     font-weight:bolder;
     font-size: 0.7em;
 }
 
-.popup_form{
-    display:flex;
-}
-
-.close-btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-
-.popup_left{
-    width:374px;
-    margin-right:40px;
-    margin-left:56px;
-}
 
 .learning_date_time{
     background-color:#F5F4F8;
@@ -472,6 +528,11 @@ body{
     
 }
 
+/* モーダルCSSここから */
+
+  /* モーダルCSSここまで */
+  
+
 /* 完了画面 */
 .done_inner{
     position: absolute;
@@ -540,11 +601,11 @@ body{
 
 @media screen and (min-width:768px){
     .btn_submit_s{
-        display:none;
+       visibility:hidden;
      }
     
      .btn_submit_s_wrap{  
-        display:none;
+        visibility: hidden;
     }
 }
 @media screen and (max-width:767px){
