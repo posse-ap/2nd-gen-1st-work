@@ -23,7 +23,54 @@
     <div id="mask" class="hidden"></div>
   
     <div id="modal" class="hidden">
-      <p>アイウエオ</p>
+      
+      <div class="container">
+        <div class="left">
+          <div class="date">
+            <h2>学習日</h2>
+            <p><input type="text" id="date"></p>
+          </div>
+          <div class="contents">
+            <h2>学習コンテンツ(複数選択可)</h2>
+            <form action="gakushucontents" method="get">
+              <input type="radio" name="contents" value="1" id="nyobi">N予備校
+              <input type="radio" name="contents" value="2" id="dotinstall">ドットインストール<br>
+              <input type="radio" name="contents" value="3" id="possekadai">POSSE課題
+            </form>
+          </div>
+          <div class="languages">
+            <h2>学習言語(複数選択可)</h2>
+            <form action="gakushugengo" method="get">
+            <input type="radio" name="languages" value="1" id="HTML">HTML
+            <input type="radio" name="languages" value="2" id="CSS">CSS
+            <input type="radio" name="languages" value="3" id="Javascript">Javascript<br>
+            <input type="radio" name="languages" value="4" id="PHP">PHP
+            <input type="radio" name="languages" value="5" id="Laravel">Laravel
+            <input type="radio" name="languages" value="6" id="SQL">SQL
+            <input type="radio" name="languages" value="7" id="SHELL">SHELL<br>
+            <input type="radio" name="languages" value="8" id="情報システム基礎知識(その他)">情報システム基礎知識(その他)
+            </form>
+          </div>
+    　  </div>
+        <div class="right">
+          <div class="length">
+            <h2>学習時間</h2>
+            <p><input type="text" id="time"></p>
+          </div>
+          <div class="comments">
+            <h2>Twitter用コメント</h2>
+            <p><input type="text" id="comment"></p>
+          </div>
+          <div class="twitterbtn">
+            <input type="checkbox" name="postontwitter" class="postontwitter">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="buttonposition">
+        <button type="menu" class="button">記録・投稿</button>
+      </div>
+
       <div id="close">
         Close
       </div>

@@ -18,7 +18,7 @@
         <h2>学習コンテンツ(複数選択可)</h2>
         <form action="gakushucontents" method="get">
           <input type="radio" name="contents" value="1" id="nyobi">N予備校
-          <input type="radio" name="contents" value="2" id="dotinstall">ドットインストール
+          <input type="radio" name="contents" value="2" id="dotinstall">ドットインストール<br>
           <input type="radio" name="contents" value="3" id="possekadai">POSSE課題
         </form>
       </div>
@@ -45,7 +45,14 @@
         <h2>Twitter用コメント</h2>
         <p><input type="text" id="comment"></p>
       </div>
+      <div class="twitterbtn">
+        <input type="checkbox" name="postontwitter" class="postontwitter">
+        <span></span>
+      </div>
     </div>
+  </div>
+  <div class="buttonposition">
+    <button type="menu" class="button">記録・投稿</button>
   </div>
 </body>
 </html>

@@ -8,10 +8,12 @@ header{
   background-color: #ffff;
 }
 
-h1{
+.header{
   width: 100%;
   margin: 0;
   height: 64px;
+  /* ↓キターーー!!!↓ */
+  overflow: hidden;
 }
 
 .week{
@@ -24,7 +26,61 @@ h1{
   margin: 17px 30px;
 }
 
-.button{
+/* モーダル部分 */
+#open, #close {
+  float: right;
+  width: 150px;
+  height: 30px;
+  margin: 18px 30px;
+  background: linear-gradient(to right, #2272bc 0%, #54cef9 100%);
+  border-radius: 100vh;
+  box-shadow: 10px 10px;
+  border: 10px;
+  color: #ffff;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  font-size: small;
+  font-weight: normal;
+}
+
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#modal {
+  background: #fff;
+  width: 900px;
+  padding: 20px;
+  border-radius: 4px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+#modal p {
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  transform: translate(0, -500px);
+}
+
+
+
+/* .button{
   float: right;
   align-items: center;
   width: 150px;
@@ -36,7 +92,7 @@ h1{
   border: 10px;
   color: #ffff;
   cursor: pointer;
-}
+} */
 
 /* 左右二分割 */
 .container{
@@ -201,3 +257,5 @@ ul{
   padding-left: 0;
   margin: 0;
 }
+
+

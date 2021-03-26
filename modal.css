@@ -50,10 +50,31 @@ form{
   padding: 0.5em;
   box-sizing: border-box;
   margin: 0.5em auto;
-  line-height: 15;
+  line-height: 18;
 }
 
 /* ラジオボタン */
 input[type="radio"]{
   margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* 記録・投稿ボタン */
+.buttonposition{
+  text-align: center;
+}
+
+.button{
+  text-align: center;
+  align-items: center;
+  font-size: large;
+  width: 500px;
+  height: 50px;
+  margin: 18px 30px;
+  background: linear-gradient(to right, #2272bc 0%, #54cef9 100%);
+  border-radius: 100vh;
+  box-shadow: 10px 10px;
+  border: 10px;
+  color: #ffff;
+  cursor: pointer;
 }
