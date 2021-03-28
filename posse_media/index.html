@@ -34,7 +34,7 @@
                 <div class="modal_left" id="modal_left">
                   <div class="s_day" id="s_day">
                     <h3>学習日</h3>
-                    <input class="inputs_day"type="text">
+                    <input class="inputs_day"type="date">
                   </div>
                   <div class="s_contents" id="s_contents">
                      <h3>学習コンテンツ(複数選択可)</h3>
@@ -146,7 +146,7 @@
                  </div>
               </div>
               <div class="graph">
-                <canvas id="canvas" style="position: relative"; height="250px";width="600px"></canvas>
+                <canvas id="canvas" style="position: relative"; height="240px";width="500px"></canvas>
 
                 
                 <script>
@@ -181,7 +181,7 @@
                                 ticks: {                      //最大値最小値設定
                                     min: 0,                   //最小値
                                     max: 8,                  //最大値
-                                    fontSize: 18,             //フォントサイズ
+                                    fontSize: 18,             
                                     stepSize: 2               //軸間隔
                                 },
                                 gridLines:{
@@ -190,8 +190,8 @@
                             }],
                             xAxes: [{                         //x軸設定
                                 display: true,                //表示設定
-                                barPercentage: 0.4,           //棒グラフ幅
-                                categoryPercentage: 0.4,      //棒グラフ幅
+                                barPercentage: 0.65,           //棒グラフ幅
+                                categoryPercentage: 0.65,      //棒グラフ幅
                                 scaleLabel: {                 //軸ラベル設定
                                    display: true,             //表示設定
                                   //  labelString: '横軸ラベル',  //ラベル
@@ -214,6 +214,8 @@
                                 bottom: 0
                             }
                         }
+                        
+                        
                     }
                 });
                 </script>
