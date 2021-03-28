@@ -14,10 +14,96 @@
         <img src='../webアプリ/img/posselogoss.png' alt="posseのロゴ" id="header" class = "header_img"></img>
         <p class = "week">4th week</p>
         <button class ="button" id = "button">記録・投稿</button>
-        <div class = "modal" id = "modal">
-            <p>あああ</p>
-        </div>
+
     </header>
+
+    <!-- モーダルエリアここから -->
+<section id="modalArea" class="modalArea">
+    <div id="modalBg" class="modalBg"></div>
+    <div class="modalWrapper">
+        <div class="modalContents">
+            <div id="closeModal" class="closeModal">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class ="ModalContainer">
+                <div class="modal-left">
+                    <div clsss ="StudyDate">
+                        <p>学習日</p>
+                        <input type = "">
+                    </div>
+                    <div class ="StudyLanguage">
+                        <p>学習言語（複数選択可）</p>
+                        <button><i class="fas fa-check-circle"></i>HTML</button>
+                        <button><i class="fas fa-check-circle"></i>CSS</button>
+                        <button><i class="fas fa-check-circle"></i>JavaScript</button>
+                        <button><i class="fas fa-check-circle"></i>PHP</button>
+                        <button><i class="fas fa-check-circle"></i>Laravel</button>
+                        <button><i class="fas fa-check-circle"></i>SQL</button>
+                        <button><i class="fas fa-check-circle"></i>SHELL</button>
+                        <button><i class="fas fa-check-circle"></i>情報システム基礎知識（その他）</button>
+                    </div>
+                    <div　class = "StudyContents">　
+                        <p>学習コンテンツ（複数選択可）</p>
+                        <button><i class="fas fa-check-circle"></i>N予備</button>
+                        <button><i class="fas fa-check-circle"></i>ドットインストール</button>
+                        <button><i class="fas fa-check-circle"></i>POSSE課題</button>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <div clsss ="StudyTime">
+                        <p>学習時間</p>
+                        <input type = "">
+                    </div>
+                    <div class = "TwitterComment"> 
+                        <p>Twitter用コメント</p>
+                        <input type = "">
+                    </div>
+                    <div class = "TwitterButton">
+                        <button><i class="fas fa-check-circle"></i>Twitterに自動投稿する</button>
+                    </div>
+                </div>
+                    
+            </div>  
+            <div class = "modal-bottom">
+                <button class = "modal-button">記録・投稿</button>
+            </div>
+        </div>
+        <!-- <div id="closeModal" class="closeModal">
+            <i class="fas fa-times"></i>
+        </div> -->
+    </div>
+</section>
+<!-- モーダルエリアここまで -->
+    <!-- <div class="popup" id="js-popup">
+        <div class="popup-inner">
+            <div class="close-btn" id="js-close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+                <div class ="modal-container">
+                    <div class="modal-left">
+                        <div clsss ="StudyTime">
+                            <p>学習時間</p>
+                            <input type = "">
+                        </div>
+                        <div　class = "StudyContents">　
+                            <p>学習コンテンツ</p>
+                            <button><i class="fas fa-check-circle"></i>N予備</button>
+                        </div>
+                    </div>
+                    <div class="modal-right">
+                    </div>
+                        
+                </div>  
+                <div class = "modal-bottom">
+                    <button class = "modal-button">記録・投稿</button>
+                </div>
+                    
+                
+        </div>      
+        <div class="black-background" id="js-black-bg">
+        </div>
+    </div> -->
+
     <main>
         <div class = "container">
             <div class="left">

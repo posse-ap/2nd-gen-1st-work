@@ -148,7 +148,70 @@ header{
     float:right;
     margin:10px 20px 10px auto;
     box-sizing: border-box;
-    
+}
+
+/* モーダルCSSここから */
+.modalArea {
+    visibility: hidden; /* displayではなくvisibility */
+    opacity : 0;
+    position: fixed;
+    z-index: 10; /* サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+}
+
+.modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+}
+.modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 70%;
+    max-width: 500px;
+    padding: 10px 30px;
+    background-color: white;
+    height: auto;
+    height:400px;
+}  
+.closeModal {
+    /* position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.is-show { /* モーダル表示用クラス */
+    visibility: visible;
+    opacity : 1;
+}
+.ModalContainer{
+    padding:20px;
+    display: flex;
+}
+.modal-left{
+    width:50%;
+    box-sizing: border-box;
+}
+.modal-right{
+    width:50%;
+    box-sizing: border-box;
+}
+  /* モーダルCSSここまで */
 
     /* margin: 0 0 0 auto; */
     /* margin-top: 0px;
@@ -156,7 +219,6 @@ header{
     margin-left: ;
      */
      /* position: absolute; */
-}
 main{
     /* background-color: whitesmoke; */
     width:100%;

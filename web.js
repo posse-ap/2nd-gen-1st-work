@@ -1,19 +1,13 @@
-function modal() {
-    var modal = document.getElementById('modal');
-    if(!modal) return;
+(function () {
+  const modalArea = document.getElementById('modalArea');
+  const openModal = document.getElementById('button');
+  const closeModal = document.getElementById('closeModal');
+  const modalBg = document.getElementById('modalBg');
+  const toggle = [openModal,closeModal,modalBg];
   
-    // var blackBg = document.getElementById('js-black-bg');
-    // var closeBtn = document.getElementById('js-close-btn');
-    // var showBtn = document.getElementById('js-show-popup');
-  
-    // closePopUp(blackBg);
-    // closePopUp(closeBtn);
-    // closePopUp(showBtn);
-    function closeModal()) {
-      if(!button) return;
-      elem.addEventListener('click', function() {
-        popup.classList.toggle('is-show');
-      });
-    }
+  for(let i=0, len=toggle.length ; i<len ; i++){
+    toggle[i].addEventListener('click',function(){
+      modalArea.classList.toggle('is-show');
+    },false);
   }
-  popupImage();
+}());
