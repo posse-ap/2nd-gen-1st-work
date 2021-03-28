@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>POSSE課題 Webアプリケーション</title>
-  <link rel="stylesheet" href="../css/bootstrap.css">
-  <!-- <link rel="stylesheet" href="../css/index.css"> -->
+  <title>aaaaaaaaaaaaaaaaaaaa POSSE課題 Webアプリケーション</title>
+  <link rel="stylesheet" href="../css/grid.css">
 
   <!-- bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <!-- JQuery -->
   <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
   <!--hart.js  -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script> -->
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
 
@@ -23,35 +22,30 @@
 
 
 <body>
-  <div class="container-fluid">
 
-    <header class="header">
-      <img src="../img/posseLogo2.png" class="header-img" alt="">
-      <p class="week">4th week</p>
-      <button type="button" class="header-btn" id="header_btn">記録・投稿</button>
+    <header class="header  ">
+      <!-- <div class="col-2 col-md-3"> -->
+        <img src="../img/posseLogo2.png" class="header-img " alt="">
+      <!-- </div> -->
+      <p class="week ">4th week</p>
+      <button class="header-btn " type="button"  id="header_btn">記録・投稿</button>
     </header>
 
-    <div class="container-box">
-      <div class="inner">
-        <main>
-
-
-          <div class="study-box">
-            <ul class="time-lists">
+            <ul class="time-lists ">
               
-              <li class="time-list">
+              <li class="time-list ">
                 <p class="today-month-total">Today</p>
                 <p class="study-num">3</p>
                 <p class="hour">hour</p>
               </li>
 
-              <li class="time-list">
+              <li class="time-list ">
                 <p class="today-month-total">Month</p>
                 <p class="study-num">120</p>
                 <p class="hour">hour</p>
               </li>
 
-              <li class="time-list">
+              <li class="time-list ">
                 <p class="today-month-total">Total</p>
                 <p class="study-num">1348</p>
                 <p class="hour">hour</p>
@@ -63,26 +57,22 @@
 
             <!-- 棒グラフ -->
             <div class="study-graph " id="study-graph">
-              <img src="../img/graph.png" alt="" class="graph">
               <!-- <canvas id="myBar" class="myBar" style="width: 240%; height: 603px;"></canvas> -->
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae quam neque culpa esse eaque cupiditate accusamus! Quaerat atque repellat dolores laudantium labore aliquam recusandae earum eius. Excepturi, ducimus doloremque eligendi sapiente commodi molestiae nisi quae quo minus earum nostrum amet est modi, corporis expedita iste quas, molestias nihil repudiandae! Molestias beatae aliquid perspiciatis autem optio quibusdam voluptatem neque modi voluptates, maiores, obcaecati sapiente quidem voluptatibus laudantium cumque eaque suscipit illo ea error omnis doloribus harum iste impedit. Eaque provident repellat numquam aperiam itaque, totam a rem deserunt magnam quaerat adipisci nostrum facere amet mollitia fugiat. Vel rem perferendis quis rerum!</p>
             </div>
-          </div><!-- end of study-box -->
-          
-          <div class="study-items ">
-            <div class="study-item">
+
+          <div class="study-items">
+            <div class="study-item ">
               <h1>学習コンテンツ</h1>
-              <img src="../img/content.png" alt="" class="study-contents">
-              <!-- <canvas id="myDoughnut" style="width: 10%; height: 43px;"></canvas> -->
+              <canvas id="myDoughnut" style="width: 10%; height: 43px;"></canvas>
             </div>
-            
-            <div class="study-item">
+
+            <div class="study-item ">
               <h1>学習言語</h1>
-              <img src="../img/language.png" alt="" >
-              <!-- <canvas id="myDoughnut2" style="width: 10%; height: 43px;"></canvas> -->
+              <canvas id="myDoughnut2" style="width: 10%; height: 43px;"></canvas>
             </div>
           </div>
 
-        </main>
 
         <footer>
           <p class="year-month">2020年10月</p>
@@ -188,9 +178,6 @@
                   <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
                 <!-- <button type="button" class="btn btn-primary">OK</button> -->
               </div>
-            </div>
-          </div>
-        </div>
 
 
 
@@ -300,7 +287,7 @@
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script> -->
 
   <!-- 円グラフ -->
-  <script>
+  <!-- <script>
     var myDoughnutElement = document.getElementById("myDoughnut");
     var myDoughnut = new Chart(myDoughnutElement, {
         type: 'doughnut', // チャートのタイプ
@@ -319,10 +306,10 @@
           // 設定なし
         }
       });
-</script>
+</script> -->
 
   <!-- 円グラフ -->
-  <script>
+  <!-- <script>
   var myDoughnutElement = document.getElementById("myDoughnut2");
   var myDoughnut = new Chart(myDoughnutElement, {
     type: 'doughnut', // チャートのタイプ
@@ -341,11 +328,11 @@
           // 設定なし
         }
       });
-</script>
+</script> -->
 
 
 <!-- 棒グラフ -->
-<script>
+<!-- <script>
   var myBarElement = document.getElementById("myBar");
   var myBar = new Chart(myBarElement, {
     type: 'bar', // チャートのタイプ
@@ -375,7 +362,7 @@
             }
           }
   });
-  </script>
+  </script> -->
 
   <!-- bootstrap -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -383,78 +370,3 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-<!-- <div class="modal-bg" id="containre-modal">
-  <div class="modal">
-
-      <button class="back" id="back">X</button>
-
-      <div class="study-day">
-        <p>学習日</p>
-        <input type="text" name="" id="" class="input-study-day" value="2020年10月27日">
-      </div>
-
-      <div class="study-contents">
-        <p>学習コンテンツ（複数選択可）</p>
-        <div class="check-box">
-          <input type="checkbox" name="" id="">N予備校
-        </div>
-        <div class="check-box">
-          <input type="checkbox" name="" id="">ドットインストール
-        </div>
-        <div class="check-box">
-          <input type="checkbox" name="" id="">POSSE課題
-        </div>
-      </div>
-
-      <div class="study-language">
-        <p>学習言語（複数選択可）</p>
-        <div class="check-box">
-          <input type="checkbox" name="" id="" >HTML
-        </div>
-        <div class="check-box">
-          <input type="checkbox" name="" id="">CSS
-        </div>
-        <div class="check-box">
-          <input type="checkbox" name="" id="">JavaScript
-        </div>
-        <div class="check-box">
-          <input type="checkbox" name="" id="">PHP
-        </div>
-        <div class="check-box">
-          <input type="checkbox" name="" id="">Laravel
-        </div>
-        <div class="check-box">
-          <input type="checkbox" name="" id="">SQL
-        </div>
-        <div class="check-box">
-          <input type="checkbox" name="" id="">SHELL
-        </div>
-        <div class="check-box">
-          <input type="checkbox" name="" id="">情報システム知識(その他)
-        </div>
-
-      </div>
-
-      <div class="study-time">
-        <p>学習時間</p>
-        <input type="text" name="" id="">
-      </div>
-
-      <div class="twitter-coment">
-        <p>Twitter用コメント</p>
-        <textarea name="" id="" cols="50" rows="7" class="bg-secondary"></textarea>
-      </div>
-
-      <input type="checkbox" name="" id="">Twitterに自動投稿する
-      <button type="button" class="modal-btn" id="modal_btn">記録・投稿</button>
-    </div> -->
-      <!--end of modal  -->
-  <!-- </div> -->
-
-
-
-
-      <!--end of モーダル -->
-      <!-- <button class="modal-btn">Modal</button> -->
