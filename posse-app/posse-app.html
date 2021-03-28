@@ -81,7 +81,7 @@
             <div class="modalInside" id="modalInside">
                 <div class="modal_lefthalf">
                     <h3>学習日</h3>
-                    <input class="modal_calendar" type="text" onclick="openCalendar()" placeholder="Select Date.." readonly="readonly">
+                    <input class="modal_calendar" type="text" onclick="openCalendar()" value="" readonly="readonly">
                     <h3>学習コンテンツ(複数選択可)</h3>
                     <ul>
                         <label class="modal_checkbox"><input class="modal_checkboxInput" type="checkbox">N予備校</label>
@@ -182,7 +182,7 @@
                         <td>31</td>
                       </tr>
                 </table>
-                <button class="calendarSubmitButton" onclick="submitDate()">決定</button>
+                <button type="submit" class="calendarSubmitButton" onclick="submitDate()">決定</button>
             </div>
         </div>
     </section>

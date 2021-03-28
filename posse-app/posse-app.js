@@ -4,6 +4,7 @@ let postComplete = document.getElementById("postComplete");
 let inmodalButton = document.getElementById("modalbutton");
 let modalCalendar = document.getElementById("modalCalendar");
 let closeModalButton = document.getElementById("closeModal");
+let calendarInputBox = document.getElementById("modal_calendar");
 
 function openModal(){
   modal.style.display = "flex";
@@ -41,8 +42,15 @@ function openCalendar(){
 
 }
 
-var submitDate = function(){
-  modalCalendar.
+function submitDate(){
+  calendarInputBox.value = "2021/04";
+
+  if(window.innerWidth<750){
+    modalBefore.style.display = "block";
+  }else{
+    modalBefore.style.display = "flex";
+  }
+  modalCalendar
 }
 
 function dateclicked(index){
@@ -53,3 +61,4 @@ function dateclicked(index){
 // function submitDate(clickedDate){
 //   console.log(clickedDate);
 // }
+
