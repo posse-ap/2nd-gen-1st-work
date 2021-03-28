@@ -291,7 +291,7 @@ body{
 }
 
 .js_circle{
-    color:#2A54EF
+    color:#2A54EF;
 }
 
 .css_circle{
@@ -345,6 +345,7 @@ body{
 }
 
 /* もーだるしょり */
+
 .modalArea {
     visibility: hidden; 
     opacity : 0;
@@ -376,6 +377,23 @@ body{
     visibility: visible;
     opacity : 1;
   }
+
+  .is-hidden{
+    visibility: hidden; 
+    opacity : 0;
+  }
+
+  .default_modal{
+    visibility: visible;
+    opacity : 1;
+    display:block;
+  }
+
+  .r_p_modal{
+    visibility: hidden; 
+    
+  }
+
 
 @media screen and (min-width:768px){
     .modalWrapper {
@@ -453,6 +471,7 @@ body{
 }
 
 
+
 .popup_form h5{
     font-weight:bolder;
     font-size: 0.7em;
@@ -488,6 +507,70 @@ body{
     margin-right:10px;
     margin-bottom: 10px;
 }
+
+.checkbox-wrap {
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.checkbox-wrap label{
+    /* margin-right: 20px; */
+    display: inline-block;
+  }
+  
+  .checkbox-wrap input{
+    display: none;
+  }
+  
+  .checkbox-wrap input + span{
+    padding-left: 22px;
+    position:relative;
+  }
+  
+  .checkbox-wrap input + span::before{
+    content: "";
+    background-image: url(./img/radio.PNG);
+    background-size: contain;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  .checkbox-wrap input + label::before{
+    background-color:#F5F4F8;
+    padding:5px 10px;
+    border-radius:20px;
+    margin-right:10px;
+    margin-bottom: 10px;
+  }
+  
+  /* .checkbox-wrap input:checked + span{
+    color: #487cff;
+    font-weight: bold;
+  } */
+  
+  .checkbox-wrap input:checked + span::after{
+    content: "";
+    background-image: url(./img/radio_checked.PNG);
+    background-size: contain;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+  }
+
+  .checkbox-wrap input:checked + label::after{
+    background-color:blue;
+    padding:5px 10px;
+    border-radius:20px;
+    margin-right:10px;
+    margin-bottom: 10px;
+  }
 
 .kinds_lang_box_wrapper{
     display:flex;

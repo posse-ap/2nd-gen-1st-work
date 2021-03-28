@@ -1,3 +1,23 @@
+var done_btn =document.getElementById("r_p_done_btn");
+var default_modal =document.getElementById("default_modal");
+var r_p_modal =document.getElementById("r_p_modal");
+
+function r_p_done(){
+    
+    //   if(!r_p_modal.classList.contains('is-show')){
+    //     r_p_modal.classList.add('is-show');
+    //     default_modal.classList.remove('is-hidden');
+    //   } else {
+    //     r_p_modal.classList.remove('is-show');
+    //     default_modal.classList.add('is-hidden')
+    //   }
+    // ;
+    console.log(r_p_modal);
+    default_modal.style.visibility="hidden";
+    r_p_modal.style.visibility="visible";
+  };
+
+
 // 'use strict'
 // var popup = document.getElementById('popup');
 // var blackBg = document.getElementById('js-black-bg');
@@ -72,29 +92,31 @@
 
 var inner=document.getElementById("modal_inner")
 
-function r_p_done(){
-  inner.innerHTML='<div class="close-btn" id="closeModal">'+
-  '<span class="fa-stack">'+
-  '<i class="fas fa-stack-2x fa-circle" style="color:#F5F4F8"></i>'+
-  '<i class="fas fa-stack-1x fa-times"></i>'+
-  '</span>'+
-'</div>'+
-  '<div class="done_inner">'+
-      '<p class="awesome">AWESOME!</p>'+
-      '<i class="fas fa-check-circle fa-5x checkmark_large" style="color:#BEE361"></i>'+
+// function r_p_done(){
+//   inner.innerHTML='<div class="close-btn" id="closeModal">'+
+//   '<span class="fa-stack">'+
+//   '<i class="fas fa-stack-2x fa-circle" style="color:#F5F4F8"></i>'+
+//   '<i class="fas fa-stack-1x fa-times"></i>'+
+//   '</span>'+
+// '</div>'+
+//   '<div class="done_inner">'+
+//       '<p class="awesome">AWESOME!</p>'+
+//       '<i class="fas fa-check-circle fa-5x checkmark_large" style="color:#BEE361"></i>'+
       
-      '<p class="r_p_txt">記録・投稿'+
-      '<br>完了しました</p>'+
-  '</div>';
-}
+//       '<p class="r_p_txt">記録・投稿'+
+//       '<br>完了しました</p>'+
+//   '</div>';
+//}
 
 (function () {
   //↓モーダルを表示するスクリプト↓
   const modalArea = document.getElementById('modalArea');
   const openModal = document.getElementById('openModal');
+  const openModal_s = document.getElementById('openModal-s');
   const closeModal = document.getElementById('closeModal');
   const modalBg = document.getElementById('modalBg');
-  const toggle = [openModal,closeModal,modalBg];
+  const toggle = [openModal,openModal_s,closeModal,modalBg];
+  
   
   for(let i=0, len=toggle.length ; i<len ; i++){
     toggle[i].addEventListener('click',function(){
@@ -104,6 +126,8 @@ function r_p_done(){
       } else {
         modalArea.classList.remove('is-show');
         bodyScrollPrevent(false,modalArea); //スクロール制御関数
+        default_modal.style.visibility="visible";
+        r_p_modal.style.visibility="hidden";
       }
     });
   }
@@ -148,4 +172,3 @@ function r_p_done(){
     }
   }
 }());
-

@@ -5,3 +5,8 @@ const config = {
 }
 
 flatpickr(calendar,config);
+
+
+// $(function() {
+//   $('#demo001').pickadate();
+// });
