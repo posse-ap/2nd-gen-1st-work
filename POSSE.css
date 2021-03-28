@@ -116,6 +116,12 @@ header img {
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgb(173, 172, 172);
   background-color: white;
+  height: 400px;
+}
+
+.gct_sample_column {
+  height: 100%;
+  width: 100%;
 }
 
 .graph img {
@@ -383,11 +389,33 @@ header img {
   cursor: pointer;
 }
 
-.popupNone {
-  display: none;
+.black-background-T {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;;
+  z-index: 1;
+  cursor: pointer;
 }
 
+iframe {
+  margin: 0 auto;
+}
+
+/* .popupNone {
+  display: none !important;
+}
+
+.popupDisplay {
+  display: block;
+} */
+
 /* モーダルの中身 */
+.backchange {
+  background-color: #e7f5ff;
+}
+
 .modal {
   display: flex;
 }
@@ -615,6 +643,7 @@ header img {
 
 /* 完了画面 */
 .awesome-page {
+  display: none;
   text-align: center;
   margin: 150px;
   /* position: absolute;

@@ -13,6 +13,9 @@
   <!-- BootstrapのJS読み込み -->
   <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
 
+  <!-- flatpickrの読み込み -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
   <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   <link href="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/html5resetcss/html5reset-1.6.css">
@@ -31,13 +34,14 @@
 
   <!-- ポップアップ -->
   <div class="popup" id="js-popup">
-    <div class="popup-inner">
+    <div class="popup-inner" id="popup-inner">
       <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
-      <div class="modal">
+      <div class="modal" id="modal">
         <div class="modalL"> 
           <div>
             <label for="study-date">学習日</label>
-            <input type="text" id="study-date" name="study-date">
+            <!-- <input type="date" id="study-date" name="study-date"> -->
+            <input class="flatpickr" type="text" readonly="readonly" id="study-date" name="study-date">
           </div>
           <h1>学習コンテンツ（複数選択可)</h1>
             <div class="study-content">
@@ -76,7 +80,7 @@
 
           <h1>学習言語（複数選択可)</h1>
           <div class="study-content">
-            <div>
+            <div id="SCL" onclick="back()">
             <label class="study-content-label">
               <input class="SCL-Input" type="checkbox">
                 <span class="SCL-DummyInput">
@@ -182,33 +186,40 @@
           </div>
         </div>
       </div>
-      <div class="modal-post" id="modal-post">
+      <div class="modal-post" id="modal-post" onclick="gotoAwesome()">
         <p>記録・投稿</p>
       </div>
-    </div>
-    <div class="black-background" id="js-black-bg"></div>
-  </div>
-
-  <!-- 完了のポップアップ -->
-  <div class="popup" id="new-js-popup">
-    <div class="popup-inner">
-      <div class="close-btn" id="new-js-close-btn"><i class="fas fa-times"></i></div>
-        <div class="awesome-page">
-          <p class="awesome">AWESOME!</p>
-          <div class="checked">
-            <p class="checked-p"></p>
-          </div>
-          <p>
-            記録・投稿<br>
-            完了しました
-          </p>
+      
+      <div class="awesome-page" id="awesome-page">
+        <p class="awesome">AWESOME!</p>
+        <div class="checked">
+          <p class="checked-p"></p>
         </div>
+        <p>
+          記録・投稿<br>
+          完了しました
+        </p>
       </div>
-    <div class="black-background" id="new-js-black-bg"></div>
+    </div>
+
+    <div class="black-background" id="js-black-bg"></div>
+
+    
+    
   </div>
-
-
-
+  
+  <!-- カレンダーのポップアップ -->
+  <!-- なぜかこれを表示させようとするとトップページのグラフが消える！！！ -->
+<!-- <div class="popup" id="new-js-popup">
+  <div class="popup-inner">
+    <div class="close-btn" id="new-js-close-btn"><i class="fas fa-times"></i></div>
+    <div>
+      <iframe src="https://calendar.google.com/calendar/embed?height=500&amp;wkst=1&amp;bgcolor=%23039BE5&amp;ctz=Asia%2FTokyo&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=amEuamFwYW5lc2UjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%2333B679&amp;color=%230B8043&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" style="border:solid 1px #777" width="500" height="500" frameborder="0" scrolling="no"></iframe>
+    </div>
+  </div>
+  <div class="black-background-T" id="new-js-black-bg"></div>
+</div> -->
+  
   <div class="container">
     <div class="pc">
       <div class="pcLeft">
@@ -233,14 +244,16 @@
         </div><!--three-->
 
         <div class="graph">
-          <img src="./img/graph.png" alt="">
+          <!-- <img src="./img/graph.png" alt=""> -->
+          <div class="gct_sample_column" id="gct_sample_column"></div>
         </div>
       </div><!--pcLeft-->
 
       <div class="circle">
         <div class="language">
           <h1>学習言語</h1>
-          <img src="./img/language.png" alt="">
+          <!-- <img src="./img/language.png" alt=""> -->
+          <div id="piechart1"></div>
           <ul class="lang-list">
             <li class="lang-list1">JavaScript</li>
             <li class="lang-list2">CSS</li>
@@ -256,7 +269,8 @@
 
         <div class="content">
           <h1>学習コンテンツ</h1>
-          <img src="./img/content.png" alt="">
+          <!-- <img src="./img/content.png" alt=""> -->
+          <div id="piechart2"></div>
           <ul class="cont-list">
             <li class="cont-list1">ドットインストール</li>
             <li class="cont-list2">N予備校</li>
@@ -278,6 +292,14 @@
     </div>
 
   </div><!--container-->
+
+
+  <script>
+    //「flatpickr」の読み込み
+    flatpickr('.flatpickr');
+</script>
+<!-- Google Chart API -->
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
 
   <script src="POSSE.js"></script>
 </body>
