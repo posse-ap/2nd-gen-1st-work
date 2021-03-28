@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="yamamoto2.css">
+    <title>yamamoto</title>
+</head>
+<body>
+    <header>
+        <div class=hdr>
+            <img class="logo" src="posse.png" alt="ロゴ">　
+            <div class="week">
+                4th week
+            </div>
+            <div id="open">
+                記録・投稿
+            </div>
+            <div id="mask" class="hidden"></div>
+                <section id="modal" class="hidden">
+                    <div class="mcontents">
+                        <div class="mmmain">
+                            <div class="mleft1">
+                                <div class="mleft">
+                                    <div class="mtitle">学習日</div>
+                                    <div class="mbox">2020年10月27日</div>
+                                </div>
+                                <div class="mleft">
+                                    <div class="mtitle">学習コンテンツ(複数選択可)</div>
+                                        <div class="mbox1">
+                                            <input type="checkbox" id="02-A" name="checkbox02" checked="checked">
+                                            <label for="02-A" class="checkbox02">N予備校</label>
+                                            <input type="checkbox" id="02-B" name="checkbox02">
+                                            <label for="02-B" class="checkbox02">ドットインストール</label>
+                                            <input type="checkbox" id="02-C" name="checkbox02">
+                                            <label for="02-C" class="checkbox02">POSSE課題</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mleft">
+                                    <div class="mtitle">学習言語（複数選択可）</div>
+                                        <div class="mbox1"> 
+                                            <input type="checkbox" id="03-A" name="checkbox03" checked="checked">
+                                            <label for="03-A" class="checkbox03">HTML</label>
+                                            <input type="checkbox" id="03-B" name="checkbox03">
+                                            <label for="02-B" class="checkbox02">CSS</label>
+                                            <input type="checkbox" id="03-C" name="checkbox03">
+                                            <label for="03-C" class="checkbox03">JavaScript</label>
+                                            <input type="checkbox" id="03-D" name="checkbox03">
+                                            <label for="03-D" class="checkbox03">PHP</label>
+                                            <input type="checkbox" id="03-E" name="checkbox03">
+                                            <label for="03-E" class="checkbox03">Laravel</label>
+                                            <input type="checkbox" id="03-F" name="checkbox03">
+                                            <label for="03-F" class="checkbox03">SQL</label>
+                                            <input type="checkbox" id="03-G" name="checkbox03">
+                                            <label for="03-G" class="checkbox03">SHELL</label>
+                                            <input type="checkbox" id="03-H" name="checkbox03">
+                                            <label for="03-H" class="checkbox03">情報システム基礎知識(その他)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mright">
+                                <div class="mleft">
+                                    <div class="mtitle">学習時間</div>
+                                    <div class="mbox2"> </div>
+                                </div>
+                                <div class="mleft">
+                                    <div class="mtitle">Twitter用コメント</div>
+                                    <div class="mbox3"> </div>
+                                </div>
+                                <div class="twitter">
+                                    <input type="checkbox" id="04-A" name="checkbox04" checked="checked">
+                                    <label for="04-A" class="checkbox04">Twitterに自動投稿する</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mbottom">
+                            <div id="mopen">
+                                記録・投稿
+                            </div>
+                            <div id="mmask" class="mhidden"></div>
+                                <section id="mmodal" class="mhidden">
+                                    <div class="mmcontents">
+                                        <div class="awesome">AWESOME!</div>
+                                        <div class="markk">✓</div>
+                                        <div class="msentence">記録・投稿<br>完了しました</div>
+                                    </div>
+                                    <div id="mclose">×</div>
+                                </section>
+                            </div>
+                        </div>
+                        <div id="close">×</div>
+                    </div> 
+                </section>        
+            </div>
+        </div>
+    </header>
+    <div class="main">
+      <div class="left">
+          <div class="lefttop">
+             <div class="box">
+                 <div class="contents1">Today</div>
+                 <div class="contents2">3</div>
+                 <div class="contents3">hour</div>
+             </div>
+             <div class="box">
+                <div class="contents1">Month</div>
+                <div class="contents2">120</div>
+                <div class="contents3">hour</div>
+             </div>
+             <div class="box">
+                <div class="contents1">Total</div>
+                <div class="contents2">1348</div>
+                <div class="contents3">hour</div>
+             </div>
+            </div>
+            <div class="leftbottom"></div>
+            
+            <div class=graph>
+                <img src="sampul.png" alt="グラフ" class="sampul">
+            </div>
+          
+      </div>
+      <div class="right">
+        <div class="choice">
+            <div class="title">学習言語</div>
+            <img src="piechart1.png" alt="グラフ" class="piechart">
+        </div>
+        <div class="choice">
+            <div class="title">学習コンテンツ</div>
+            <img src="piechart2.png" alt="グラフ" class="piechart">
+        </div>
+      </div>
+
+    </div>
+    <fooder>
+        <p class="ft">＜　 2020年10月 　＞</p>
+    </fooder>
+<script src="record.js"></script>      
+</body>
+</html>

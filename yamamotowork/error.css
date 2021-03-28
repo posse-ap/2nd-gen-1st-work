@@ -1,0 +1,61 @@
+/* ヘッダー */
+.hdr{
+    display: flex;
+    height: 64px;
+    width: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    background: #fff;
+    padding-left: 3%;
+    padding-right: 3%;
+    z-index: 99999;
+}
+.logo{  
+    height: 40%;
+    display: inline-block;
+    margin: 19.2px;
+}
+.week{
+    display: inline-block;
+    color: #A1C0D6;
+    margin-top: 21px; 
+}
+
+/* エラー画面 */
+.main{
+    padding: 10px; 
+    background-color:#F5F5F8;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+.contents{
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 80%;
+    height: 3.2rem; 
+} 
+.error{
+    color: #F3BD67;
+    margin-bottom: 5px;
+}
+.mark{
+    background: #F3BD67;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    font-size: 40px;
+}
+.sentence{
+    margin-top: 15px;
+}
+
