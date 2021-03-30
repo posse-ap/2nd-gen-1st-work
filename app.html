@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="app.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自主制作アプリ</title>
+</head>
+<body>
+    <header class="header">
+            <img src="./img/posseLogo.png" alt="ロゴ">
+       
+        <div class="header-word">
+            <span> 4th week</span>
+    
+        </div>
+        
+     <a href="#modal-00" class="header-button">記録・設定</a>
+
+    </header>
+  <!--------------------------------------------------------- 記録完了モーダル0 --------------------------------------------------------------------------------------------------------------->
+    <div class="modal-wrapper0" id="modal-00">
+        <a href="#!" class="modal-overlay0"></a>
+        <div class="modal-window0">
+          <div class="modal-check0">
+          <div class="modal-left-content0">
+            <tr>
+                <td><b> 学習日</b></td>
+                <td><input type="text" name="name" size="30" maxlength="20"></td>
+            </tr>
+            <div class="mycheckbox1">
+              <!-- <tr> -->
+                <td><b>学習コンテンツ（複数選択可）</b></td>
+                <td>
+                  <input type="checkbox"  value="N予備校">N予備校
+                  <input type="checkbox"  value="ドットインストール">ドットインストール
+                  <input type="checkbox" value="POSSE課題">POSSE課題
+
+                </td>
+              <!-- </tr> -->
+            </div>
+              <tr>
+                <td ><b>学習言語（複数選択可能）</b></td>
+                <td>
+                  <input type="checkbox" name="language" value="HTML">HTML
+                  <input type="checkbox" name="language" value="CSS">CSS
+                  <input type="checkbox" name="language" value="JavaScript">JavaScript
+                  <input type="checkbox" name="language" value="PHP">PHP
+                  <input type="checkbox" name="language" value="Laravel">Larvel
+                  <input type="checkbox" name="language" value="SQL">SQL
+                  <input type="checkbox" name="language" value="SHELL">SHELL
+                  <input type="checkbox" name="language" value="情報システム基礎知識（その他）">情報システム基礎知識
+                </td>
+          </div>
+          <div class="modal-right-content0">
+                <td><b> 学習時間</b></td>
+                <td><input type="text" name="name" size="30" maxlength="20"></td>
+              </tr>
+              <tr>
+                <td><b> Twitter用コメント</b></td>
+                <td><input type="text" name="name" size="30" maxlength="50"></td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" name="SNS" value="Twitter">Twitterにシェア
+              </tr>
+          </div>
+          </div>
+         
+         <a href="#modal-01" class="header-button">記録・設定</a>
+         <a href="#!" class="modal-close0">
+          <i class="far fa-times-circle0">
+              ×
+          </i>
+      </a>
+        </div>
+        
+        </div>
+    </div>
+
+    <div class="modal-wrapper" id="modal-01">
+        <a href="#!" class="modal-overlay"></a>
+        <div class="modal-window">
+          <div class="modal-content">
+            <img src="./img/check.png" alt="ロゴ">
+            <p>
+                記録・投稿
+            </p>
+            <p>
+                完了しました
+            </p>
+        </div>
+         <a href="#!" class="modal-close">
+            <i class="far fa-times-circle">
+                ×
+            </i>
+         </a>
+        </div>
+    </div>
+   
+   
+    <div class="main">
+      <div class="content">
+        <div class=content-left>
+          <div class="records">
+            <div class="today-score">
+              <p class="heading">Today</p>
+              <p class="number">3</p>
+              <p class="hour">hour</p>
+            </div>
+            <div class=months-score>
+              <p class="heading">Month</p>
+              <p class="number">120</p>
+              <p class="hour">hour</p>
+            </div>
+            <div class=total-score>
+              <p class="heading">Total</p>
+              <p class="number">1348</p>
+              <p class="hour">hour</p>
+            </div>
+          </div>
+          <div class=graph>
+            <img src="./img/graph.png" alt="グラフ" class="graph-picture">
+          </div>
+
+        </div>
+        <div class="content-right">
+          <div class="language-box">
+            <p class="heading2">学習言語</p>
+            <img src="./img/left-graph.png" alt="左グラフ" class="graph-picture2">
+            <a class="language-word-a">JavaScript</a>
+            <a class="language-word-b">CSS</a>
+            <a class="language-word-c">PHP</a>
+            <a class="language-word-d">HTML</a>
+            <a class="language-word-e">Laravel</a>
+            <a class="language-word-f">SQL</a>
+            <a class="language-word-g">SHELL</a> 
+            <a class="language-word-h">情報システム基礎知識（その他）</a>
+          </div>
+          <div class="content-box">
+            <p class="heading2">学習コンテンツ</p>
+            <img src="./img/left-graph.png" alt="右グラフ" class="graph-picture2">
+            <a class="language-word1">ドットインストール</a>
+            <a class="language-word2">N予備校</a>
+            <a class="language-word3">POSSE課題</a>
+          </div>
+
+        </div>
+
+      </div>
+        <div class="footer">
+          2020年10月
+
+        </div>
+
+    </div>
+         
+</body>
+</html>
