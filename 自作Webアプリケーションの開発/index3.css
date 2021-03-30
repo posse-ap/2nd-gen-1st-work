@@ -1,0 +1,111 @@
+.mainimage3{
+  display:inline-flex;
+  margin:100px;
+  margin-bottom: 30px;
+}
+.contentlist ul li{
+  display: inline-block;
+}
+
+.day p{
+  margin: auto;
+}
+
+.languagelist ul {
+	font-size: 0; /* タグ改行時の空白防止 */
+}
+ 
+.languagelist ul li{
+	display: inline-block;
+	margin-left: 10px;
+	font-size: 14px; /* ulでサイズ0にしたのを戻す */
+}
+
+li{
+  position: relative;
+  padding-left: 25px;
+  list-style: none;
+  background-color: #cecece;
+  border-radius: 20px;
+}
+
+li:before {
+  content: "";
+  position: absolute;
+  top: .35em;
+  left: 6px;
+  transform: rotate(50deg);
+  width: 3px;
+  height: 7px;
+  border-right: 2px solid #cecece;
+  border-bottom: 2px solid #cecece;
+  right:5px;
+}
+
+li:after {
+  content: "";
+  position: absolute;
+  top: .2em;
+  left: 0;
+  width: 15px;
+  height: 15px;
+ background-color: #a5a5a5;
+  border-radius: 50%;
+}
+
+ul {
+  padding:10px;
+}
+
+.day-1{
+ background-color:#dddddd ;
+ display: inline-block;
+ width: 400px;
+ height:40px;
+ top:50%;
+ left: 50%;
+ border-radius: 15px;
+ text-align: center;
+ padding-top: 5px;
+ text-align: left;
+}
+
+.time p{
+  margin: auto;
+}
+
+.time1{
+  display: block;
+  width:400px;
+  height: 45px;
+  background-color: #dddddd;
+  border-radius: 15px;
+}
+
+.twitter1{
+  display: block;
+  width:400px;
+  height: 250px;
+  background-color: #dddddd;
+  border-radius: 15px;
+}
+
+.toukou{
+  text-align: center;
+    color:white;
+    background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+    border-radius: 100px;
+    text-decoration: none;
+    border: none;
+    width: 350px;
+    height:45px;
+    margin-left: 350px;
+}
+
+.toukou p{
+  padding-top: 15px;
+}
+
+.right{
+  margin-left: 100px;
+}
