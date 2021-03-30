@@ -1,0 +1,84 @@
+div {
+    border: 1px solid;
+    border-color: black;
+
+}
+
+.body-wrapper {
+    height: 100vh;
+}
+
+.index-header {
+    height: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-img {
+    height: 32px;
+}
+
+.index-header-div1 {
+    display: flex;
+    align-items: center;
+}
+
+.index-h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.studytime-wrapper {
+    text-align: center;
+    width: 45%;
+    margin: 0 0 0 5%;
+}
+
+.studytime {
+    display: flex;
+    height: 30%;
+    box-sizing: border-box;
+}
+
+.studytime div {
+    margin: 20px 10px;
+    width: calc(100% / 3);
+}
+
+.studytime p {
+    margin: 0;
+}
+
+.bargraph {
+    height: calc(70% - 20px);
+    margin: 0 10px 20px 10px;
+    box-sizing: border-box;
+}
+
+.piecharts {
+    display: flex;
+    width: 45%;
+    margin: 0 5% 0 0;
+}
+
+.piecharts div {
+    margin: 20px 10px;
+    width: 50%;
+}
+
+.piecharts p {
+    margin: 0 0 0 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    height: calc(100% - 128px);
+}
+
+.index-footer {
+    text-align: center;
+    height: 64px;
+}
