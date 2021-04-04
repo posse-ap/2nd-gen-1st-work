@@ -3,21 +3,24 @@ body{
   margin: 0;
 }
 
-header{
-  justify-content: space-between;
-  background-color: #ffff;
-}
-
 .header{
   width: 100%;
   margin: 0;
   height: 64px;
   /* ↓キターーー!!!↓ */
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffff;
 }
 
 .week{
   font-size: small;
+}
+
+.header_div1{
+  display: flex;
+  align-items: center;
 }
 
 .posselogo{
@@ -26,8 +29,14 @@ header{
   margin: 17px 30px;
 }
 
+.nthweek {
+  font-size: small;
+  font-weight: normal;
+  color:red;
+}
+
 /* モーダル部分 */
-#open, #close {
+#open{
   float: right;
   width: 150px;
   height: 30px;
@@ -57,7 +66,7 @@ header{
   background: #fff;
   width: 900px;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 20px;
   position: absolute;
   top: 40px;
   left: 0;
@@ -75,24 +84,53 @@ header{
 }
 
 #modal.hidden {
-  transform: translate(0, -500px);
+  transform: translate(0, -1500px);
 }
 
+/* カレンダー */
+#calendar {
+  font-size: 10px;
+  font-weight: normal;
+  display: none;
+}
 
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
 
-/* .button{
-  float: right;
-  align-items: center;
-  width: 150px;
-  height: 30px;
-  margin: 18px 30px;
-  background: linear-gradient(to right, #2272bc 0%, #54cef9 100%);
-  border-radius: 100vh;
-  box-shadow: 10px 10px;
-  border: 10px;
-  color: #ffff;
-  cursor: pointer;
-} */
+td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+
+td:first-child {
+  color: red;
+}
+
+td:last-child {
+  color: royalblue;
+}
+
+/* ローディング画面 */
+#loading {
+  background: #fff;
+  width: 900px;
+  padding: 20px;
+  border-radius: 20px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: none;
+}
+
+.loadingpng{
+  width: 100%;
+  height: 100%;
+}
 
 /* 左右二分割 */
 .container{
@@ -121,6 +159,26 @@ header{
 }
 
 /* 勉強時間入力場所三分割 */
+
+p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.whentitle{
+  font-size: small;
+  color: #1754ef;
+}
+
+.number{
+  color: rgb(179, 1, 90);
+}
+
+.hour{
+  font-size: small;
+  color: #2272bc;
+}
+
 .items{
   display: inline-block;
   justify-content: space-around;
@@ -140,12 +198,17 @@ header{
   text-align: center;
 }
 
-.bargraph{
-  display: block;
-  margin-bottom: 20px;
+/* 棒グラフ */
+.container_bargraph{
+  margin: 0;
+  height: 100%;
+  background-color: #ffff;
+  border-radius: 10px;
+}
+#bargraph{
+  height: 100%;
   width: 100%;
-  text-align: center;
-  box-sizing: border-box;
+  margin: 10px;
 }
 
 /* 右側 */

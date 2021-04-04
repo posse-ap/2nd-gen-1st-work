@@ -6,53 +6,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Webアプリケーション</title>
   <!-- ↓jquery -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- 　↓chart.js↓ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <!-- datalabelsプラグインを呼び出す -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modal.css">
 </head>
 <body>
   <!-- ヘッダー -->
 <header>
   <h1 class="header">
-    <img src="./posselogo.jpg" alt="posseロゴ" class="posselogo">
-    <!-- <button type="menu" class="button">記録・投稿</button> -->
-    
+    <div class="header_div1">
+      <img src="./posselogo.jpg" alt="posseロゴ" class="posselogo">
+      <!-- <button type="menu" class="button">記録・投稿</button> -->
+      <span class="nthweek">4th week</span>
+    </div>
     <div id="open">
-      記録・投稿
+    記録・投稿
     </div>
   
     <div id="mask" class="hidden"></div>
-  
+
+  <!-- モーダル -->
     <div id="modal" class="hidden">
-      <p>アイウエオ</p>
       <div id="close">
-        Close
+        <span class="dli-close"></span>
       </div>
+      <div class="modalcontainer">
+        <div class="modalleft">
+          <div class="modaldate">
+            <h2>学習日</h2>
+            <p class="gakushubi"><input type="text" id="date"></p>
+            <div id="calendar"></div>
+          </div>
+          <div class="modalcontents">
+            <h2>学習コンテンツ(複数選択可)</h2>
+            <form action="gakushucontents" method="get">
+              <input type="checkbox" name="contents" value="1" id="nyobi">N予備校
+              <input type="checkbox" name="contents" value="2" id="dotinstall">ドットインストール<br>
+              <input type="checkbox" name="contents" value="3" id="possekadai">POSSE課題
+            </form>
+          </div>
+          <div class="modallanguages">
+            <h2>学習言語(複数選択可)</h2>
+            <form action="gakushugengo" method="get">
+            <input type="checkbox" name="languages" value="1" id="HTML">HTML
+            <input type="checkbox" name="languages" value="2" id="CSS">CSS
+            <input type="checkbox" name="languages" value="3" id="Javascript">Javascript<br>
+            <input type="checkbox" name="languages" value="4" id="PHP">PHP
+            <input type="checkbox" name="languages" value="5" id="Laravel">Laravel
+            <input type="checkbox" name="languages" value="6" id="SQL">SQL
+            <input type="checkbox" name="languages" value="7" id="SHELL">SHELL<br>
+            <input type="checkbox" name="languages" value="8" id="情報システム基礎知識(その他)">情報システム基礎知識(その他)
+            </form>
+          </div>
+    　  </div>
+        <div class="modalright">
+          <div class="length">
+            <h2>学習時間</h2>
+            <p><input type="text" id="time"></p>
+          </div>
+          <div class="comments">
+            <h2>Twitter用コメント</h2>
+            <p><input type="text" id="comment"></p>
+          </div>
+          <div class="twitterbtn">
+            <input type="checkbox" name="postontwitter" class="postontwitter">
+            <span>Twitterに自動投稿する</span>
+          </div>
+        </div>
+      </div>
+      <div class="buttonposition">
+        <button type="menu" class="button">記録・投稿</button>
+      </div>
+    </div>
+    <div id="loading">
+      <img src="./loading.png" class="loadingpng" alt="ローディング画面">
     </div>
 
   </h1>
 </header>
-<div class="container">
+<main>
+  <div class="container">
   <div class="left">
     <div class="items">
         <li class="studytimeoftoday">
-          <p>Today</p>
-          <p> </p>
-          <p>hour</p>
+          <p class="whentitle">Today</p>
+          <p class="number">3</p>
+          <p class="hour">hour</p>
         </li>
         <li class="studytimeofmonth">
-          <p>Month</p>
-          <p> </p>
-          <p>hour</p>
+          <p class="whentitle">Month</p>
+          <p class="number">20</p>
+          <p class="hour">hour</p>
         </li>
         <li class="studytimeoftotal">
-          <p>Total</p>
-          <p> </p>
-          <p>hour</p>
+          <p class="whentitle">Total</p>
+          <p class="number">1213</p>
+          <p class="hour">hour</p>
         </li>
     </div>
       <!-- グラフ -->
-      <div class="divofbargraph">
-        <img src="./graph1.png" alt="棒グラフ" class="bargraph">
+      <div class="container_bargraph">
+        <canvas id="bargraph"></canvas>
       </div>
   </div>
     <div class="right">
@@ -61,8 +119,8 @@
         <div class="gakushugengo">
           <h2>学習言語</h2>
         </div>
-        <div>
-          <img src="./graph2.png" alt="円グラフ1" class="circlegraph">
+        <div class="container_piechart1">
+          <canvas id="piechart1"></canvas>
         </div>
         <div>
           <ul>
@@ -81,8 +139,8 @@
       <div class="contents">
         <div class="gakushucontents">
           <h2>学習コンテンツ</h2>
-          <div>
-            <img src="./graph3.png" alt="円グラフ2" class="circlegraph">
+          <div class="container_piechart2">
+            <canvas id="piechart2"></canvas>
           </div>
           <ul>
             <li class="contents1">ドットインストール</li>
@@ -92,12 +150,15 @@
         </div>
       </div>
     </div>
-</div>
+  </div>
+</main>
 <footer>
   <div class="footer">
-    <h2> < 2010年　10月 > </h2>
+    <h2> ＜ 2010年　10月 ＞ </h2>
   </div>
 </footer>
 <script src="./modal.js"></script>
+<script src="./calendar.js"></script>
+<script src="./graph.js"></script>
 </body>
 </html>
