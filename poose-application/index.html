@@ -10,6 +10,7 @@
     <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="//unpkg.com/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <!-- カスタムテーマ -->
     <!-- <link rel="stylesheet" href="//unpkg.com/flatpick/dist/themes/airbnb.css"> -->
     <script src="//unpkg.com/flatpickr"></script>
@@ -116,17 +117,17 @@
                                     <div class="check_box_wrap"><input type="checkbox"><span>POSSE課題</span></div> -->
                                     <div class="checkbox-wrap">
                                       <label class="check_box_wrap">
-                                        <input type="checkbox" name="" value="checkbox1" class="check_box">
+                                        <input type="checkbox" name="cont" value="checkbox1" class="check_box">
                                         <span>N予備校</span>
                                       </label>
                                   
                                       <label class="check_box_wrap">
-                                        <input type="checkbox" name="" value="checkbox2" class="check_box">
+                                        <input type="checkbox" name="cont" value="checkbox2" class="check_box">
                                         <span>ドットインストール</span>
                                       </label>
                                   
                                       <label class="check_box_wrap">
-                                        <input type="checkbox" name="" value="checkbox3" class="check_box">
+                                        <input type="checkbox" name="cont" value="checkbox3" class="check_box">
                                         <span>POSSE課題</span>
                                       </label>
                                     </div>
@@ -143,40 +144,40 @@
                                     <div class="check_box_wrap"><input type="checkbox" name="" id=""><span></span>情報システム基礎知識（その他）</div> -->
                                     <div class="checkbox-wrap">
                                         <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox1" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox1" class="check_box">
                                             <span>HTML</span>
                                           </label>
                                       
                                           <label class="check_box_wrap" >
-                                            <input type="checkbox" name="" value="checkbox2" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox2" class="check_box">
                                             <span>CSS</span>
                                           </label>
                                       
                                           <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox3" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox3" class="check_box">
                                             <span>JavaScript</span>
                                           </label>
                                         <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox1" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox4" class="check_box">
                                             <span>PHP</span>
                                           </label>
                                       
                                           <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox2" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox5" class="check_box">
                                             <span>Laravel</span>
                                           </label>
                                       
                                           <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox3" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox6" class="check_box">
                                             <span>SQL</span>
                                           </label>
                                         <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox1" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox7" class="check_box">
                                             <span>SHELL</span>
                                           </label>
                                       
                                           <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox2" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox8" class="check_box">
                                             <span>情報システム基礎知識（その他）</span>
                                           </label>
                                         </div>
@@ -186,9 +187,9 @@
                             <h5>学習時間</h5>
                             <input type="text" class="learning_date_time">
                             <h5>Twitter用コメント</h5>
-                            <textarea id="" cols="" class="twitter_comment"></textarea>
+                            <textarea id="twitter_comment" cols="140" maxlength="140" class="twitter_comment"></textarea>
                             <div class="checkbox-wrap">
-                                <label class="twitter_check"><input type="checkbox" name="" value="checkbox3" class="check_box">
+                                <label class="twitter_check"><input type="checkbox" name="twitter" value="checkbox_twitter" class="check_box">
                                     <span>Twitterに投稿する</span>
                                 </label>
                             </div>

@@ -3,18 +3,27 @@ var form_modal =document.getElementById("default_modal");
 var loading_modal =document.getElementById("loading");
 var success_modal =document.getElementById("r_p_modal");
 let set_time_id =null;
+const content =document.getElementsByName("cont");
+const language=document.getElementsByName("lang");
+const twitter=document.getElementsByName("twitter");
+
+
 //record_post_modal
 function loading(){
   form_modal.style.display="none";
   loading_modal.style.display="flex";
   // r_p_loading.style.visibility="visible";
-  set_time_id=setTimeout(show_success,5000);
-  console.log(hoge);
+  set_time_id=setTimeout(success,3000);
 };
 
-function show_success(){
+function success(){
   loading_modal.style.display="none";
   success_modal.style.display="block";
+
+  //twitterに関する処理
+  const txt_twitter=document.getElementById("twitter_comment").value;
+  if(twitter[0].checked)window.open("https://twitter.com/intent/tweet?text="+txt_twitter);
+  
   };
 
 var inner=document.getElementById("modal_inner")
@@ -25,7 +34,7 @@ const openModal_s = document.getElementById('openModal-s');
 const closeModal = document.getElementById('closeModal');
 const modalBg = document.getElementById('modalBg');
 const modalParts = [openModal,openModal_s,closeModal,modalBg]; // これはArray
-(function () {
+
   //↓モーダルを表示するスクリプト↓
     
   // for(let i=0, len=modalParts.length ; i<len ; i++){
@@ -61,6 +70,10 @@ const modalParts = [openModal,openModal_s,closeModal,modalBg]; // これはArray
         success_modal.style.display="none";
         if(set_time_id!==null) clearTimeout(set_time_id);
         set_time_id=null;
+        twitter[0].checked=false;
+        for (let i=0;i<3;i++)content[i].checked=false;
+        for (let i=0;i<8;i++)language[i].checked=false;
+        document.getElementById("twitter_comment").value='';
       }
     });
   })
@@ -104,4 +117,3 @@ const modalParts = [openModal,openModal_s,closeModal,modalBg]; // これはArray
       node.addEventListener(event, handler);
     }
   }
-}());

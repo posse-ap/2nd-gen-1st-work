@@ -12,6 +12,7 @@ google.charts.load("current", {packages:["corechart"]});
         // }
         // xhr.send();
 
+
         var data = google.visualization.arrayToDataTable([
           ['language', 'Hours per Day'],
           ['javascript', 10],
@@ -46,6 +47,10 @@ google.charts.load("current", {packages:["corechart"]});
       else if (window.attachEvent) {
           window.attachEvent('onresize', resizeHandler);
       }
+
+      var resize_graf =_.throttle(resizeHandler,5000)
+      window.addEventListener("resize",resize_graf)
+      
       }
 
       function draw_cont_chart() {
@@ -78,6 +83,9 @@ google.charts.load("current", {packages:["corechart"]});
       else if (window.attachEvent) {
           window.attachEvent('onresize', resizeHandler);
       }
+
+      var resize_graf =_.throttle(resizeHandler,5000)
+      window.addEventListener("resize",resize_graf)
       }
 
       google.charts.load('current', {'packages':['bar']});
@@ -162,4 +170,7 @@ google.charts.load("current", {packages:["corechart"]});
     else if (window.attachEvent) {
         window.attachEvent('onresize', resizeHandler);
     }
+
+    var resize_graf =_.throttle(resizeHandler,5000)
+      window.addEventListener("resize",resize_graf)
   }

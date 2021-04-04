@@ -52,7 +52,16 @@ function next_month(){
 }
 
 function create_calendar(){
-  const date=[];
-  
+  const date=[
+    ...prev_month(),
+    ...this_month(),
+    ...next_month(),
+  ];
 
+  let week=[];
+
+  for(let i=date.length;i>0;i-7){
+    week.push(date.splice(0,7))
+  };
+  
 }
