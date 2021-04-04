@@ -6,106 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="web.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+        integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+    <script src="https://unpkg.com/flatpickr"></script>
+    <!-- googleチャート -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript"></script>
+    <!-- ああ -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        
+    </script>
 </head>
 
 <body>
     <header>
-        <img src='../webアプリ/img/posselogoss.png' alt="posseのロゴ" id="header" class = "header_img"></img>
-        <p class = "week">4th week</p>
-        <button class ="button" id = "button">記録・投稿</button>
+        <img src='./img/posselogoss.png' alt="posseのロゴ" id="header" class="header_img"></img>
+        <p class="week">4th week</p>
+        <button class="button" id="button">記録・投稿</button>
 
     </header>
 
     <!-- モーダルエリアここから -->
-<section id="modalArea" class="modalArea">
-    <div id="modalBg" class="modalBg"></div>
-    <div class="modalWrapper">
-        <div class="modalContents">
-            <div id="closeModal" class="closeModal">
-                <i class="fas fa-times"></i>
-            </div>
-            <div class ="ModalContainer">
-                <div class="modal-left">
-                    <div clsss ="StudyDate">
-                        <p>学習日</p>
-                        <input type = "">
-                    </div>
-                    <div class ="StudyLanguage">
-                        <p>学習言語（複数選択可）</p>
-                        <button><i class="fas fa-check-circle"></i>HTML</button>
-                        <button><i class="fas fa-check-circle"></i>CSS</button>
-                        <button><i class="fas fa-check-circle"></i>JavaScript</button>
-                        <button><i class="fas fa-check-circle"></i>PHP</button>
-                        <button><i class="fas fa-check-circle"></i>Laravel</button>
-                        <button><i class="fas fa-check-circle"></i>SQL</button>
-                        <button><i class="fas fa-check-circle"></i>SHELL</button>
-                        <button><i class="fas fa-check-circle"></i>情報システム基礎知識（その他）</button>
-                    </div>
-                    <div　class = "StudyContents">　
-                        <p>学習コンテンツ（複数選択可）</p>
-                        <button><i class="fas fa-check-circle"></i>N予備</button>
-                        <button><i class="fas fa-check-circle"></i>ドットインストール</button>
-                        <button><i class="fas fa-check-circle"></i>POSSE課題</button>
-                    </div>
-                </div>
-                <div class="modal-right">
-                    <div clsss ="StudyTime">
-                        <p>学習時間</p>
-                        <input type = "">
-                    </div>
-                    <div class = "TwitterComment"> 
-                        <p>Twitter用コメント</p>
-                        <input type = "">
-                    </div>
-                    <div class = "TwitterButton">
-                        <button><i class="fas fa-check-circle"></i>Twitterに自動投稿する</button>
-                    </div>
-                </div>
-                    
-            </div>  
-            <div class = "modal-bottom">
-                <button class = "modal-button">記録・投稿</button>
-            </div>
+    <section id="modalArea" class="modalArea">
+        <div id="modalBg" class="modalBg">
         </div>
-        <!-- <div id="closeModal" class="closeModal">
-            <i class="fas fa-times"></i>
-        </div> -->
-    </div>
-</section>
-<!-- モーダルエリアここまで -->
-    <!-- <div class="popup" id="js-popup">
-        <div class="popup-inner">
-            <div class="close-btn" id="js-close-btn">
-                <i class="fas fa-times"></i>
-            </div>
-                <div class ="modal-container">
+        <div class="modalWrapper">
+            <div class="modalContents">
+                <div id="closeModal" class="closeModal">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="modal-container">
                     <div class="modal-left">
-                        <div clsss ="StudyTime">
-                            <p>学習時間</p>
-                            <input type = "">
+                        <div class="StudyDate">
+                            <label for="studydate" class="margin-name">学習日</lavel>
+                                <!-- <input name="studydate" class="text" type="text"> -->
+                                <input class="flatpickr" type="text" placeholder="" readonly="readonly">
                         </div>
-                        <div　class = "StudyContents">　
-                            <p>学習コンテンツ</p>
-                            <button><i class="fas fa-check-circle"></i>N予備</button>
+                        <div class="StudyContents">
+                            <p class="margin-name">学習コンテンツ（複数選択可）</p>
+                            <!-- <input type="checkbox" onclick= "check(hog1)"><i class="fas fa-check-circle checkButton"></i>N予備</input> -->
+                            <div class="checkboxes">
+                                <label>
+                                    <input type="checkbox" class="checkbox">
+                                    <span class="checkbox-fontas">N予備</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="checkbox">
+                                    <span class="checkbox-fontas">ドットインストール</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="checkbox">
+                                    <span class="checkbox-fontas">POSSE課題</span>
+                                </label>
+                                <!-- <button class="SelectionButton" onclick="check(hog2)"><i class="fas fa-check-circle checkButton"></i>ドットインストール</button>
+                                <button class="SelectionButton" onclick="check(hog3)"><i lass="fas fa-check-circle checkButton"></i>POSSE課題</button> -->
+                            </div>
+                        </div>
+                        <div class="StudyLanguage">
+                            <p class="margin-name"> 学習言語（複数選択可）</p>
+                            <button class="SelectionButton" onclick="check(hog4)"><i
+                                    class="fas fa-check-circle checkButton"></i>HTML</button>
+                            <button class="SelectionButton" onclick="check(hog5)"><i
+                                    class="fas fa-check-circle checkButton"></i>CSS</button>
+                            <button class="SelectionButton" onclick="check(hog6)"><i
+                                    class="fas fa-check-circle checkButton"></i>JavaScript</button>
+                            <button class="SelectionButton" onclick="check(hog7)"><i
+                                    class="fas fa-check-circle checkButton"></i>PHP</button>
+                            <button class="SelectionButton" onclick="check(hog8)"><i
+                                    class="fas fa-check-circle checkButton"></i>Laravel</button>
+                            <button class="SelectionButton" onclick="check(hog9)"><i
+                                    class="fas fa-check-circle checkButton"></i>SQL</button>
+                            <button class="SelectionButton" onclick="check(hog10)"><i
+                                    class="fas fa-check-circle checkButton"></i>SHELL</button>
+                            <button class="SelectionButton" onclick="check(hog11)"><i
+                                    class="fas fa-check-circle checkButton"></i>情報システム基礎知識（その他）</button>
                         </div>
                     </div>
                     <div class="modal-right">
+                        <div clsss="StudyTime">
+                            <p class="margin-name">学習時間</p>
+                            <input class="text" type="text">
+                        </div>
+                        <div class="TwitterComment">
+                            <p class="margin-name">Twitter用コメント</p>
+                            <input class="text" type="text">
+                        </div>
+                        <div class="TwitterButton">
+                            <label>
+                                <input type="checkbox" class="twitterCheckbox">
+                                <span class="twitterCheckbox-fontas"></span>Twitterに自動投稿する
+                            </label>
+                            <!-- <button><i class="fas fa-check-circle checkButton"></i></button>Twitterに自動投稿する -->
+                        </div>
                     </div>
-                        
-                </div>  
-                <div class = "modal-bottom">
-                    <button class = "modal-button">記録・投稿</button>
                 </div>
-                    
-                
-        </div>      
-        <div class="black-background" id="js-black-bg">
+                <div class="modal-button-area">
+                    <button class="modal-button">記録・投稿</button>
+                </div>
+            </div>
         </div>
-    </div> -->
+    </section>
+    <!-- モーダル終了 -->
+
+
+
 
     <main>
-        <div class = "container">
+        <div class="container">
             <div class="left">
                 <div class="boxes">
                     <div class="box">
@@ -126,21 +135,24 @@
                     </div>
                 </div>
                 <div class="pin_graf">
-                    <img class="pin_graf_img" src='../webアプリ/img/leftgraff.png'>
+                    <!-- <img class="pin_graf_img" src='./img/leftgraff.png'> -->
+                    <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
                 </div>
             </div>
-            <div class = right>
-                <div class = "lang_study">
-                    <div class = "lang_content" >
+            <div class=right>
+                <div class="lang_study">
+                    <div class="lang_content">
                         <h3>学習言語</h3>
                     </div>
-                        <img class = "circle_graf_img" src = '../webアプリ/img/gengoguraff.png'>
-                
-                    <div class = "lang_content">
+                    <div class="circle_graf_img"></div>
+
+                    <div class="lang_content">
                         <ul>
-                            <div class ="a"><li><span>JavasSript</span></li>
-                            <li><span>CSS</span></li>
-                            <li><span>PHP</span></li></div>
+                            <div class="lang-list">
+                                <li class="lang-list1"><span>JavasSript</span></li>
+                                <li><span>CSS</span></li>
+                                <li><span>PHP</span></li>
+                            </div>
                             <li><span>HTML</span></li>
                             <li><span>Laravel</span></li>
                             <li><span>SQL</span></li>
@@ -149,13 +161,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class = "study_contents">
-                    <div class = "lang_content"> 
+                <div class="study_contents">
+                    <div class="lang_content">
                         <h3>学習コンテンツ</h3>
                     </div>
-                        <img class = "circle_graf_img" src = '../webアプリ/img/conteguraff.png'>
-                    
-                    <div  class = "lang_content">
+                    <!-- <img class="circle_graf_img" src='./img/conteguraff.png'> -->
+                    <div class="circle_graf_img" id="donutchart"></div>
+                    <div class="lang_content">
                         <ul>
                             <li><span></span></li>
                             <li><span></span></li>
@@ -175,7 +187,8 @@
     </main>
     <footer>
         <div>
-           <span class = "footer"> <i class="fas fa-chevron-left"></i>2020年　10月<i class="fas fa-chevron-right"></i></span>
+            <div class="footer"> <i class="fas fa-chevron-left my-example"></i>2020年 10月<i
+                    class="fas fa-chevron-right my-example"></i></div>
         </div>
     </footer>
     <script src="web.js"></script>
