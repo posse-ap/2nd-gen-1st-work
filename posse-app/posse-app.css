@@ -44,6 +44,7 @@ body{
     background-color:#F5F5F8;
     height: 80vh;
     padding:20px 50px; 
+    margin:0;
     display: flex;
     box-sizing: border-box;
 }
@@ -131,12 +132,13 @@ body{
 /* 棒グラフ写真 の外側の箱*/
 .bargraph{
     display:flex;
+    height:50%;
     border-radius: 10px;
     margin: 0 10px;
     }
 
 /* 棒グラフ自体 */
-.bargraphPhoto{
+.bargraphitself{
     display: block;
     width: 100%;
     max-height: 100%;
@@ -214,38 +216,6 @@ body{
 }
 
 
-.bottomCalendar::before, .calendarModalTitle::before{
-    content: "";
-    width: 6px;
-  height: 6px;
-  border: 0px;
-    border-bottom: solid 2px #1C75BD;
-  border-left: solid 2px #1C75BD;
-    -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -4px;
-} 
-
-.bottomCalendar::after, .calendarModalTitle::after{
-    content: "";
-    width: 6px;
-  height: 6px;
-  border: 0px;
-    border-top: solid 2px #99BAD3;
-  border-right: solid 2px #99BAD3;
-    -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  top: 50%;
-  right: 0;
-  
-  margin-top: -4px;
-} 
 /* モーダル */
 .modalOutside{
     display:none;
@@ -291,7 +261,7 @@ body{
     display: none;
 }
 
-.modal_checkboxInput{
+.modal-checkboxInput{
     box-sizing: border-box;
     cursor: pointer;
     display: inline-block;
@@ -300,7 +270,7 @@ body{
     width: auto;
 }
 
-.modal_checkboxInput::before{
+.modal-checkboxInput::before{
     background: #fff;
     border: 1px solid #231815;
     content: '';
@@ -314,13 +284,13 @@ body{
 } */
 
 /* モーダル内左半分 */
-.modal_lefthalf{
+.modal-lefthalf{
     display: block;
     width: 50%;
     margin-right: 5%;
 }
 
-.modal_checkbox{
+.modal-checkbox{
     display: inline-block;
     border-radius: 10px;
     background: #F5F5F8;
@@ -330,8 +300,9 @@ body{
 
 #modal ul{
     display: block;
+    padding:0;
 }
-.modal_input,.modal_calendar, .modal_inputTWT{
+.modal-input,.modal-calendar, .modal-inputTWT{
     display: block;
     width: 90%;
     background-color: #F5F5F8;
@@ -340,11 +311,13 @@ body{
     height: 30px;
 }
 
-.modal_inputTWT{
+.modal-inputTWT{
     height: 50%;
+    resize: none;
 }
+
 /* モーダル内右半分 */
-.modal_righthalf{
+.modal-righthalf{
     display: block;
     width: 50%;
 }
@@ -444,11 +417,97 @@ body{
     background-color:rgba(154, 154, 154, 0.243);
 }
 
+
+
 .calendarSubmitButton{
     display: block;
     padding: 8px 10%;
     margin: 30px auto;
 }
+
+.bottomCalendar{
+    display:inline-block;
+}
+
+.calendarback, .calendarforward{
+    display: inline-block;
+    color: #1C75BD;
+}
+/* ローディング */
+#loading{
+    display: none;
+    width:100%;
+    height:100%;
+    margin:0;
+    text-align: center;
+}
+
+.loader {
+    font-size: 10px;
+    margin: 20% auto;
+    text-indent: -9999em;
+    width:11em;
+    height: 11em;
+    border-radius: 50%;
+    background: linear-gradient(#35C0F5, #1278C1);
+    background: -moz-linear-gradient(left, pink 10%, rgba(255, 255, 255, 0) 42%);
+    background: -webkit-linear-gradient(left, white);
+    background: -o-linear-gradient(left, green 10%, rgba(255, 255, 255, 0) 42%);
+    background: -ms-linear-gradient(left, blue 10%, rgba(255, 255, 255, 0) 42%);
+
+    position: relative;
+    -webkit-animation: load3 1.4s infinite linear;
+    animation: load3 1.4s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .loader:before {
+    width: 50%;
+    height: 50%;
+    background:white;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+  .loader:after {
+    background:white;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  @-webkit-keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes load3 {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  
+
+
 /* 画面幅が750px以下の時 */
 @media screen and (max-width:750px){
     html{
@@ -476,6 +535,7 @@ body{
         outline:none;
         cursor: pointer;
         border-radius: 100vh;
+        box-sizing: border-box;
         width: 80%;
         background: linear-gradient(0.25turn, #1073BC, #3BCDFD);
         color: white;
@@ -487,13 +547,14 @@ body{
         }
 
     .header{
-        padding: 5%;
+        padding: 2%;
     }
 
     .main{
         display: block;
         width:100vw;
         height: auto;
+        margin-right:auto;
         padding:0;
     }
 
@@ -504,7 +565,7 @@ body{
     }
 
     .bargraphPhoto{
-        height:150px;
+        height: 150px;
     }
 
     .hourBigBox{
@@ -562,13 +623,13 @@ body{
         margin: 0 10px 10px 0;
     }
 
-    .contentsBigBox ul, .languageBigBox ul{
+    .contentsBigBox li, .languageBigBox li{
         font-size: smaller;
         color: #8A8A8A;
         margin: 1px 0 0 0;
     }
 
-    .contentsBigBox ul::before, .languageBigBox ul::before{
+    .contentsBigBox li::before, .languageBigBox li::before{
         margin: 3px;
     }
     .bottomCalendar{
@@ -582,7 +643,7 @@ body{
         height: fit-content;
         margin:0;
         padding:0 0 5px 0;
-        background:rgba(211, 211, 211, 0.243);
+        background:#F5F5F8;
     }
 
     .modalOutside{
@@ -617,26 +678,30 @@ body{
         font-size: small;
     }
 
-    .modal_input, .modal_calendar{
+    .modal-input, .modal-calendar{
         display: block;
         /* height: 6%; */
         margin:0;
         padding: auto;
         width: 100%;
     }
-    .modal_inputTWT{
+    .modal-inputTWT{
         width: 100%;
         height: 50px;
     }
 
-    .modalInside{
-        height: 78%;
+    .calendar{
+        margin: 10% auto;
     }
-    .modal_lefthalf,.modal_righthalf{
+
+    .modalInside{
+        height: 70%;
+    }
+    .modal-lefthalf,.modal-righthalf{
         width: 100%;
     }
     .modalbutton{
-        margin: 3% auto;
+        margin: 15% auto;
         padding: 10px 35%;
         font-size: medium;
 
@@ -654,7 +719,10 @@ body{
     .postComplete{
         padding: 60% 10%;
     }
-    
+    .loader{
+        margin: 60% auto;
+    }
+
 }
 
 
