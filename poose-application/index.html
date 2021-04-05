@@ -10,6 +10,7 @@
     <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="//unpkg.com/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <!-- カスタムテーマ -->
     <!-- <link rel="stylesheet" href="//unpkg.com/flatpick/dist/themes/airbnb.css"> -->
     <script src="//unpkg.com/flatpickr"></script>
@@ -80,7 +81,8 @@
             </div>
             <div class="badge bg-white text-dark l_a_card">
                 <h1 class="study_l_c">学習コンテンツ</h1>
-                    <img src="./img/conteguraff.png" alt="言語" class="doughnut_lang">
+                    <!-- <img src="./img/conteguraff.png" alt="言語" class="doughnut_lang"> -->
+                    <div id="donutchart_cont" class="doughnut_lang"></div>
                         <div class="kinds_cont_wrapper">                    
                             <div><i class="fas fa-circle dot_circle"></i>ドットインストール</div>
                             <div><i class="fas fa-circle n_yobi_circle"></i>N予備校</div>
@@ -105,7 +107,8 @@
                     <div class="popup_form">
                         <div class="popup_left">
                             <h5>学習日</h5>
-                            <input type="text" id="calendar" class="learning_date_time" data-mindate=today  placeholder="Select Date.." readonly="readonly" onclick="calendar()">
+                            <!-- <input type="text" id="calendar" class="learning_date_time" data-mindate=today  placeholder="Select Date.." readonly="readonly" onclick="calendar()"> -->
+                            <input type="text" id="calendar" class="learning_date_time" >
                             <!-- <input id="demo001"  type="text" placeholder="クリックしてください"> -->
                             <h5>学習コンテンツ（複数選択可）</h5>
                             <div class="lang_cont_wrap">
@@ -114,17 +117,17 @@
                                     <div class="check_box_wrap"><input type="checkbox"><span>POSSE課題</span></div> -->
                                     <div class="checkbox-wrap">
                                       <label class="check_box_wrap">
-                                        <input type="checkbox" name="" value="checkbox1" class="check_box">
+                                        <input type="checkbox" name="cont" value="checkbox1" class="check_box">
                                         <span>N予備校</span>
                                       </label>
                                   
                                       <label class="check_box_wrap">
-                                        <input type="checkbox" name="" value="checkbox2" class="check_box">
+                                        <input type="checkbox" name="cont" value="checkbox2" class="check_box">
                                         <span>ドットインストール</span>
                                       </label>
                                   
                                       <label class="check_box_wrap">
-                                        <input type="checkbox" name="" value="checkbox3" class="check_box">
+                                        <input type="checkbox" name="cont" value="checkbox3" class="check_box">
                                         <span>POSSE課題</span>
                                       </label>
                                     </div>
@@ -141,40 +144,40 @@
                                     <div class="check_box_wrap"><input type="checkbox" name="" id=""><span></span>情報システム基礎知識（その他）</div> -->
                                     <div class="checkbox-wrap">
                                         <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox1" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox1" class="check_box">
                                             <span>HTML</span>
                                           </label>
                                       
-                                          <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox2" class="check_box">
+                                          <label class="check_box_wrap" >
+                                            <input type="checkbox" name="lang" value="checkbox2" class="check_box">
                                             <span>CSS</span>
                                           </label>
                                       
                                           <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox3" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox3" class="check_box">
                                             <span>JavaScript</span>
                                           </label>
                                         <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox1" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox4" class="check_box">
                                             <span>PHP</span>
                                           </label>
                                       
                                           <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox2" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox5" class="check_box">
                                             <span>Laravel</span>
                                           </label>
                                       
                                           <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox3" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox6" class="check_box">
                                             <span>SQL</span>
                                           </label>
                                         <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox1" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox7" class="check_box">
                                             <span>SHELL</span>
                                           </label>
                                       
                                           <label class="check_box_wrap">
-                                            <input type="checkbox" name="" value="checkbox2" class="check_box">
+                                            <input type="checkbox" name="lang" value="checkbox8" class="check_box">
                                             <span>情報システム基礎知識（その他）</span>
                                           </label>
                                         </div>
@@ -184,15 +187,23 @@
                             <h5>学習時間</h5>
                             <input type="text" class="learning_date_time">
                             <h5>Twitter用コメント</h5>
-                            <textarea id="" class="twitter_comment"></textarea>
-                            <div><input type="checkbox" name="" id=""><span>Twitterに自動投稿する</span>
+                            <textarea id="twitter_comment" cols="140" maxlength="140" class="twitter_comment"></textarea>
+                            <div class="checkbox-wrap">
+                                <label class="twitter_check"><input type="checkbox" name="twitter" value="checkbox_twitter" class="check_box">
+                                    <span>Twitterに投稿する</span>
+                                </label>
                             </div>
                         </div>
                     </div>
                     <div class="btn_submit_modal_wrap">
-                        <i class="shadow-lg p-3 btn_submit_modal" id="r_p_done_btn" onclick="r_p_done()">
+                        <i class="shadow-lg p-3 btn_submit_modal" id="r_p_done_btn" onclick="loading()">
                             記録・投稿
                         </i>
+                    </div>
+                </div>
+                <div class=" justify-content-center loading" id="loading">
+                    <div class="spinner-border fa-3x loading_spiner" role="status" >
+                        <span class="visually-hidden" >Loading...</span>
                     </div>
                 </div>
                 <div class="r_p_modal" id="r_p_modal">
@@ -209,7 +220,13 @@
                             <br>完了しました</p>
                         </div>
                 </div>
+                <div class="calendar_modal">
+                    <div></div>
+                </div>
             </div>
+            <!-- <div class="modal_calendar_wrapper">
+
+            </div> -->
             </div>
           </section>
           <!-- モーダルエリアここまで -->
