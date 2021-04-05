@@ -1,13 +1,46 @@
-h2{
+h2 .modalcontainer{
   font-weight: normal;
   font-size: 90%;
   font-weight: bold;
   margin: 5px;
 }
 
-p{
+p .modalcontainer{
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+/* クローズボタン */
+.dli-close {
+  float: right;
+  margin: 10px;
+  vertical-align: middle;
+  color: #333;
+  line-height: 1;
+  width: 1em;
+  height: 0.1em;
+  background: currentColor;
+  border-radius: 0.1em;
+  position: relative;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.dli-close::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  border-radius: inherit;
+  transform: rotate(90deg);
+}
+
+.modalcontainer{
+  font-size: small;
+  font-weight: normal;
 }
 
 form{
@@ -15,18 +48,18 @@ form{
   margin-bottom: 20px;
 }
 
-.container{
+.modalcontainer{
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 64px;
 }
 
-.left{
+.modalleft{
   margin-left: 56px;
   margin-right: 20px;
 }
 
-.right{
+.modalright{
   margin-left: 20px;
   margin-right: 56px;
 }
@@ -36,25 +69,25 @@ form{
   background-color: #f5f4f9;
   border: none;
   border-radius: 0.5em;
-  width: 80%;
+  width: 100%;
 }
 
 #date, #time{
   padding: 0.5em;
   box-sizing: border-box;
   margin: 0.5em auto;
-  line-height: 3;
+  line-height: 1.5;
 }
 
 #comment{
   padding: 0.5em;
   box-sizing: border-box;
   margin: 0.5em auto;
-  line-height: 18;
+  line-height: 12;
 }
 
 /* ラジオボタン */
-input[type="radio"]{
+input[type="checkbox"]{
   margin-left: 10px;
   margin-bottom: 20px;
 }
