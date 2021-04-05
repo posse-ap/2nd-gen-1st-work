@@ -177,8 +177,9 @@ header{
     max-width: 500px;
     padding: 10px 30px;
     background-color: white;
-    height: auto;
-    height:400px;
+    border-radius: 20px;
+    
+    /* height:400px; */
 }  
 .closeModal {
     /* position: absolute;
@@ -194,22 +195,150 @@ header{
     text-align: center;
     cursor: pointer;
 }
+.modalContents{
+    padding:10px;
+}
 
 .is-show { /* モーダル表示用クラス */
     visibility: visible;
     opacity : 1;
 }
-.ModalContainer{
-    padding:20px;
+.modal-container{
     display: flex;
 }
 .modal-left{
-    width:50%;
     box-sizing: border-box;
+    width:50%;
+    margin-right: 10px;
+}
+.StudyDate{
+    margin:5px;
+}
+.StudyContents{
+    margin:10px 5px ;
+    box-sizing: border-box;
+
+}
+.StudyLanguage{
+    margin:10px 5px ;
 }
 .modal-right{
     width:50%;
     box-sizing: border-box;
+    margin-left: 10px;
+}
+.StudyTime{
+    margin:10px 5px ;
+}
+.TwitterComment{
+    margin:10px 5px ;
+}
+.TwitterButton{
+    margin:10px 5px ;
+}
+.margin-name{
+    font-size: smaller;
+}
+.checkboxes{
+    box-sizing: border-box;
+    width: 100%;
+}
+.checkbox {
+    box-sizing: border-box;
+    display: none;
+}
+.checkbox-fontas {
+    /* position: relative; */
+    vertical-align: middle;
+    font-size: 15px;
+    border-radius: 30px;
+    border:none;
+    background-color:#f5f5f8;
+    padding: 10px;
+    margin:5px 0;
+}
+.checkbox + .checkbox-fontas:before {
+    font-weight: 800;
+    font-family: "Font Awesome 5 Free";
+    content: '\f058';
+    color: #ccc;
+}
+/* .checkbox:checked + .checkbox-fontas:after{
+    background-color:#0AD2FF;
+} */
+.checkbox:checked + .checkbox-fontas:before {
+    color: #0467ad;
+}
+.twitterCheckbox{
+    box-sizing: border-box;
+    display: none;
+}
+.twitterCheckbox-fontas{
+    position: relative;
+    vertical-align: middle;
+    font-size: 20px;
+    border-radius: 30px;
+    border:none;
+    /* background-color:#f5f5f8; */
+    padding: 10px;
+    margin:5px 0;
+}
+.twitterCheckbox + .twitterCheckbox-fontas:before {
+    font-weight: 800;
+    font-family: "Font Awesome 5 Free";
+    content: '\f058';
+    color: #ccc;
+}
+.twitterCheckbox:checked + .twitterCheckbox-fontas:before {
+color: #0467ad;
+}
+/* .checkbox input[type = checkbox] + label:before{
+    display:inline;
+    font-family: Font Awesome 5 Free;
+    content:"fas fa-check-circle";
+} */
+
+
+.SelectionButton{
+    border-radius: 30px;
+    border:none;
+    background-color:#f5f5f8;
+    padding: 5px;
+    margin:5px 0;
+}
+.checkButton{
+    color:silver ;
+    padding:2px;
+}
+.text{
+    background-color:#f5f5f8 ;
+    border: none;
+    height:30px;
+    margin: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 8px;
+}
+.modal-button{
+    color:white;
+    border-radius: 30px;
+    background:linear-gradient(-90deg,#0AD2FF,#0467ad);
+    border:none;
+    font-size: 0.9em;
+    padding: 8px 60px 8px 60px;
+}
+.modal-button-area{
+    margin-top: 10px;
+    text-align: center;
+}
+.flatpickr{
+    background-color:#f5f5f8 ;
+    border: none;
+    height:30px;
+    margin: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 8px;
 }
   /* モーダルCSSここまで */
 
@@ -342,12 +471,20 @@ ul{
     padding:10px;
     
 }
-li{
-    display: inline;
+.lang-list li::before{
+    display: block;
+    content:"";
+    border-radius: 50%;
+    width:10px;
+    height: 10px;
+    position: absolute;
+    left:-1.1em;
+    top:0.2em;
 }
-.a{
-    display: flex;
+.lang-list1::before{
+    background: #0345ec;
 }
+
 footer{
     background-color: whitesmoke;
     /* margin: 0 auto; */
@@ -355,10 +492,15 @@ footer{
     
 }
 .footer{
-    justify-content:center;
+    text-align: center;
     width:100%;
     box-sizing: border-box;
 
+}
+
+.my-example{
+    color: #0572C2;
+    margin:5px;
 }
 }
 
