@@ -25,7 +25,7 @@
 <body>
   
   <header>
-    <img src="./img/posseLogo.png" alt="">
+    <img src="./img/posseLogo.png" alt="POSSE">
       <p class="four">4th week</p>
       <div class="post" id="post">
           <p>記録・投稿</p>
@@ -37,130 +37,129 @@
     <div class="popup-inner" id="popup-inner">
       <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
       <div class="modal" id="modal">
-        <div class="modalL"> 
+        <div class="modalL">
           <div>
             <label for="study-date">学習日</label>
-            <!-- <input type="date" id="study-date" name="study-date"> -->
             <input class="flatpickr" type="text" readonly="readonly" id="study-date" name="study-date">
           </div>
           <h1>学習コンテンツ（複数選択可)</h1>
             <div class="study-content">
-              <div>
-              <label class="study-content-label">
-                <input class="SCL-Input" type="checkbox">
-                <span class="SCL-DummyInput">
-                </span>
-                <span class="SCL-LabelText">
-                  N予備校
-                </span>
-              </label>
-            </div>
-            <div>
-              <label class="study-content-label">
-                <input class="SCL-Input" type="checkbox">
+              <div id="SCL" onclick="back('hog1')">
+                <label class="study-content-label">
+                  <input class="SCL-Input" type="checkbox" id="hog1">
                   <span class="SCL-DummyInput">
                   </span>
                   <span class="SCL-LabelText">
-                    ドットインストール
+                    N予備校
                   </span>
-              </label>
-            </div>
-            <div>
-              <label class="study-content-label">
-                <input class="SCL-Input" type="checkbox">
-                  <span class="SCL-DummyInput">
-                  </span>
-                  <span class="SCL-LabelText">
-                    POSSE課題
-                  </span>
-              </label>
-            </div>
-          </div><!--study-content-->
+                </label>
+              </div>
+              <div id="SCL" onclick="back('hog2')">
+                <label class="study-content-label">
+                  <input class="SCL-Input" type="checkbox" id="hog2">
+                    <span class="SCL-DummyInput">
+                    </span>
+                    <span class="SCL-LabelText">
+                      ドットインストール
+                    </span>
+                </label>
+              </div>
+              <div id="SCL" onclick="back('hog3')">
+                <label class="study-content-label">
+                  <input class="SCL-Input" type="checkbox" id="hog3">
+                    <span class="SCL-DummyInput">
+                    </span>
+                    <span class="SCL-LabelText">
+                      POSSE課題
+                    </span>
+                </label>
+              </div>
+            </div><!--study-content-->
 
 
           <h1>学習言語（複数選択可)</h1>
           <div class="study-content">
-            <div id="SCL" onclick="back()">
-            <label class="study-content-label">
-              <input class="SCL-Input" type="checkbox">
-                <span class="SCL-DummyInput">
-                </span>
-                <span class="SCL-LabelText">
-                  HTML
-                </span>
-            </label>
-          </div>
-          <div>
-            <label class="study-content-label">
-              <input class="SCL-Input" type="checkbox">
-                <span class="SCL-DummyInput">
-                </span>
-                <span class="SCL-LabelText">
-                  CSS
-                </span>
-            </label>
-          </div>
-          <div>
-            <label class="study-content-label">
-              <input class="SCL-Input" type="checkbox">
-                <span class="SCL-DummyInput">
-                </span>
-                <span class="SCL-LabelText">
-                  JavaScript
-                </span>
-            </label>
-          </div>
-          <div>
-            <label class="study-content-label">
-              <input class="SCL-Input" type="checkbox">
-                <span class="SCL-DummyInput">
-                </span>
-                <span class="SCL-LabelText">
-                  PHP
-                </span>
-            </label>
-          </div>
-          <div>
-            <label class="study-content-label">
-              <input class="SCL-Input" type="checkbox">
-                <span class="SCL-DummyInput">
-                </span>
-                <span class="SCL-LabelText">
-                  Laravel
-                </span>
-            </label>
-          </div>
-          <div>
-            <label class="study-content-label">
-              <input class="SCL-Input" type="checkbox">
-                <span class="SCL-DummyInput">
-                </span>
-                <span class="SCL-LabelText">
-                  SQL
-                </span>
-            </label>
-          </div>
-          <div>
-            <label class="study-content-label">
-              <input class="SCL-Input" type="checkbox">
-                <span class="SCL-DummyInput">
-                </span>
-                <span class="SCL-LabelText">
-                  SHELL
-                </span>
-            </label>
-          </div>
-          <div>
-            <label class="study-content-label">
-              <input class="SCL-Input" type="checkbox">
-                <span class="SCL-DummyInput">
-                </span>
-                <span class="SCL-LabelText">
-                  情報システム基礎知識
-                </span>
-            </label>
-          </div>
-        </div><!--study-content-->
+            <div id="SCL" onclick="back('hoge1')">
+              <label class="study-content-label" id="study-content-label">
+                <input class="SCL-Input" id="hoge1" type="checkbox">
+                  <span class="SCL-DummyInput">
+                  </span>
+                  <span class="SCL-LabelText">
+                    HTML
+                  </span>
+              </label>
+            </div>
+            <div id="SCL" onclick="back('hoge2')">
+              <label class="study-content-label">
+                <input class="SCL-Input" type="checkbox"  id="hoge2">
+                  <span class="SCL-DummyInput">
+                  </span>
+                  <span class="SCL-LabelText">
+                    CSS
+                  </span>
+              </label>
+            </div>
+            <div id="SCL" onclick="back('hoge3')">
+              <label class="study-content-label">
+                <input class="SCL-Input" type="checkbox" id="hoge3">
+                  <span class="SCL-DummyInput">
+                  </span>
+                  <span class="SCL-LabelText">
+                    JavaScript
+                  </span>
+              </label>
+            </div>
+            <div id="SCL" onclick="back('hoge4')">
+              <label class="study-content-label">
+                <input class="SCL-Input" type="checkbox" id="hoge4">
+                  <span class="SCL-DummyInput">
+                  </span>
+                  <span class="SCL-LabelText">
+                    PHP
+                  </span>
+              </label>
+            </div>
+            <div  id="SCL" onclick="back('hoge5')">
+              <label class="study-content-label">
+                <input class="SCL-Input" type="checkbox" id="hoge5">
+                  <span class="SCL-DummyInput">
+                  </span>
+                  <span class="SCL-LabelText">
+                    Laravel
+                  </span>
+              </label>
+            </div>
+            <div id="SCL" onclick="back('hoge6')">
+              <label class="study-content-label">
+                <input class="SCL-Input" type="checkbox" id="hoge6">
+                  <span class="SCL-DummyInput">
+                  </span>
+                  <span class="SCL-LabelText">
+                    SQL
+                  </span>
+              </label>
+            </div>
+            <div id="SCL" onclick="back('hoge7')">
+              <label class="study-content-label">
+                <input class="SCL-Input" type="checkbox" id="hoge7">
+                  <span class="SCL-DummyInput">
+                  </span>
+                  <span class="SCL-LabelText">
+                    SHELL
+                  </span>
+              </label>
+            </div>
+            <div id="SCL" onclick="back('hoge8')">
+              <label class="study-content-label">
+                <input class="SCL-Input" type="checkbox" id="hoge8">
+                  <span class="SCL-DummyInput">
+                  </span>
+                  <span class="SCL-LabelText">
+                    情報システム基礎知識
+                  </span>
+              </label>
+            </div>
+          </div><!--study-content-->
 
         </div>
         <div class="modalR">
@@ -176,7 +175,7 @@
           
           <div>
             <label class="T-study-content-label">
-              <input class="T-SCL-Input" type="checkbox">
+              <input class="T-SCL-Input" type="checkbox" id="T-SCL-Input" onclick="Check()">
                 <span class="T-SCL-DummyInput">
                 </span>
                 <span class="T-SCL-LabelText">
@@ -187,9 +186,11 @@
         </div>
       </div>
       <div class="modal-post" id="modal-post" onclick="gotoAwesome()">
-        <p>記録・投稿</p>
+        <p id="goToTwitter">記録・投稿</p>
       </div>
       
+      <div class="loader" id="loader">Loading...</div>
+
       <div class="awesome-page" id="awesome-page">
         <p class="awesome">AWESOME!</p>
         <div class="checked">
@@ -204,12 +205,10 @@
 
     <div class="black-background" id="js-black-bg"></div>
 
-    
-    
   </div>
   
   <!-- カレンダーのポップアップ -->
-  <!-- なぜかこれを表示させようとするとトップページのグラフが消える！！！ -->
+  <!-- なぜかこれを表示させようとするとトップページのグラフが消える！ -->
 <!-- <div class="popup" id="new-js-popup">
   <div class="popup-inner">
     <div class="close-btn" id="new-js-close-btn"><i class="fas fa-times"></i></div>
@@ -253,7 +252,7 @@
         <div class="language">
           <h1>学習言語</h1>
           <!-- <img src="./img/language.png" alt=""> -->
-          <div id="piechart1"></div>
+          <div class="piechart1" id="piechart1"></div>
           <ul class="lang-list">
             <li class="lang-list1">JavaScript</li>
             <li class="lang-list2">CSS</li>
@@ -293,13 +292,9 @@
 
   </div><!--container-->
 
-  <script>
-    //「flatpickr」の読み込み
-    flatpickr('.flatpickr');
-</script>
 <!-- Google Chart API -->
-  <script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
 
-  <script src="POSSE.js"></script>
+<script src="POSSE.js"></script>
 </body>
 </html>

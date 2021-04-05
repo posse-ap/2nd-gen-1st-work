@@ -79,7 +79,6 @@ header img {
   width: 30%;
   text-align: center;
   border-radius: 10px;
-  /* height: 150px; */
 }
 
 .period {
@@ -317,27 +316,21 @@ header img {
 
 /* ポップアップ */
 .popup {
-  /* position: fixed;
-  right: 0;
-  bottom: 0; */
   width: 100%;
   height: 100%;
   z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
+  display: none;
   transition: .6s;
+  
 
 }
 
 .popup.is-show {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 .popup-inner {
   position: absolute;
-  left: 50%;
-  top: 50%;
   transform: translate(-50%,-50%);
   width: 900px;
   width: 80%;
@@ -346,8 +339,8 @@ header img {
   background-color: #fff;
   z-index: 2;
   border-radius: 30px;
-  /* margin: 50px; */
 }
+
 
 .close-btn {
   position: absolute;
@@ -357,8 +350,6 @@ header img {
   text-align: center;
   cursor: pointer;
   padding: 5px;
-  /* width: 50px;
-  height: 50px; */
   color: #333;
   align-items: center;
   vertical-align: middle;
@@ -403,14 +394,6 @@ iframe {
   margin: 0 auto;
 }
 
-/* .popupNone {
-  display: none !important;
-}
-
-.popupDisplay {
-  display: block;
-} */
-
 /* モーダルの中身 */
 .backchange {
   background-color: #e7f5ff;
@@ -454,6 +437,11 @@ iframe {
   align-items: center;
 }
 
+.modal-post p a {
+  text-decoration: none;
+  color: white;
+}
+
 #study-date {
   background-color: #F5F5F8;
   border: none;
@@ -487,8 +475,7 @@ iframe {
   border-radius: 50px;
   width: fit-content;
   margin: 0;
-  /* margin-bottom: 8px; */
-  /* line-height: 1; */
+  margin-bottom: 8px;
 }
 
 .SCL-Input {
@@ -496,14 +483,6 @@ iframe {
   width: 0;
   opacity: 0;
 }
-
-/* label + input[type=checkbox]:checked {
-  background: #0F71BD;
-}
-
-.study-content-label + input[type=checkbox]:checked {
-  background: green;
-} */
 
 .SCL-Input:checked + .SCL-DummyInput{
   background: #0F71BD;
@@ -526,6 +505,7 @@ iframe {
   transform-origin: 2px 2px;
   background: #FFFFFF;
 }
+
 .SCL-Input:checked, .SCL-DummyInput::after {
   content: "";
   display: block;
@@ -539,9 +519,6 @@ iframe {
   transform-origin: 2px 2px;
   background: #FFFFFF;
 }
-/* .study-content-label:checked {
-  background: #E7F5FF;
-} */
 
 .SCL-DummyInput {
   position: relative;
@@ -578,67 +555,137 @@ iframe {
   height: 200px;
 }
 
-  /* twitter */
-  .T-study-content-label {
-    padding: 12px 8px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .T-SCL-Input {
-    margin: 0;
-    width: 0;
-    opacity: 0;
-  }
+/* twitter */
+.T-study-content-label {
+  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
-  .T-SCL-Input:checked + .T-SCL-DummyInput {
-    background: #0F71BD;
+.T-SCL-Input {
+  margin: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.T-SCL-Input:checked + .T-SCL-DummyInput {
+  background: #0F71BD;
+}
+
+.T-SCL-Input:checked, .T-SCL-DummyInput::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-135deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+
+.T-SCL-Input:checked, .T-SCL-DummyInput::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-45deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+.T-SCL-DummyInput {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: solid 2px transparent;
+  background: rgba(0, 0, 0, .15);
+  border-radius: 50%;
+  transition: all .15s linear;
+}
+.T-SCL-LabelText {
+  margin-left: 12px;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+  
+/* ローディング */
+.loader {
+  display: none;
+  font-size: 10px;
+  margin: 30vh auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #ffffff;
+  background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(-135deg, #3ccfff, #0f71bc);
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  background: white;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  .T-SCL-Input:checked, .T-SCL-DummyInput::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 35%;
-    height: 4px;
-    border-radius: 2px;
-    transform: translate(-6px, 5px) rotateZ(-135deg);
-    transform-origin: 2px 2px;
-    background: #FFFFFF;
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-  .T-SCL-Input:checked, .T-SCL-DummyInput::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 70%;
-    height: 4px;
-    border-radius: 2px;
-    transform: translate(-6px, 5px) rotateZ(-45deg);
-    transform-origin: 2px 2px;
-    background: #FFFFFF;
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  .T-SCL-DummyInput {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 32px;
-    height: 32px;
-    border: solid 2px transparent;
-    background: rgba(0, 0, 0, .15);
-    border-radius: 50%;
-    transition: all .15s linear;
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-  .T-SCL-LabelText {
-    margin-left: 12px;
-    display: block;
-    font-size: 18px;
-    font-weight: bold;
-  }
+}
+
+
 
 
 /* 完了画面 */
@@ -646,9 +693,6 @@ iframe {
   display: none;
   text-align: center;
   margin: 150px;
-  /* position: absolute;
-  top: 50%;
-  left: 50%; */
 }
 
 .awesome {
@@ -684,11 +728,6 @@ iframe {
 }
 
 
-
-
-
-
-
 /* error画面 */
 
 .error-page {
@@ -715,7 +754,18 @@ iframe {
 }
 
 
-@media (max-width: 855px) {
+@media (max-width: 2000px) and (min-width:750px){
+  .popup-inner {
+    left: 50%;
+    top: 50%;
+  }
+}
+
+@media (max-width: 855px) and (min-width:750px) {
+  
+  .popup {
+    overflow-y: scroll;
+  }
 
   .popup-inner {
     margin: 30px auto;
@@ -726,7 +776,7 @@ iframe {
 
 
 @media (max-width: 750px){
-
+  
   .post {
     display: none;
   }
@@ -796,25 +846,19 @@ iframe {
 
   /* ポップアップ */
   .popup {
-    /* position: absolute; */
-    /* left: 0; */
     align-items: flex-end;
-    /* top: 100%; */
     position: relative;
     bottom: 0;
     width: 100%;
     height: 100%;
     z-index: 9999;
-    opacity: 0;
-    visibility: hidden;
+    display: none;
   }
 
   .popup-inner {
     position: absolute;
-    /* top: 200px; */
-    top: 35vh;
+    top: 30vh;
     left: 50%;
-    /* bottom: 1000%; */
     right: 0;
     margin-top: 80%;
     margin-bottom: 0;
@@ -825,7 +869,6 @@ iframe {
     background-color: #fff;
     z-index: 2;
     border-radius: 30px 30px 0 0;
-    /* margin: 50px; */
   }
 
 
