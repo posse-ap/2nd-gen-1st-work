@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webアプリ</title>
+    <link rel="stylesheet" href="Indie production.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="header">
+
+                    <div class="img">
+                        <img src="/Users/d_chan/Downloads/posselogowhite.jpg" alt="POSSE" class="posse-img">
+                    </div>
+
+                    <div class="weeks">
+                        <p class="week">4th week</p>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="left-side">
+
+                    <div class="three-card">
+
+                        <div class=card-one>
+
+                            <p><span class="status">today</span>
+
+                                <br><span class="figure-today">3</span>
+
+                                <br><span class="hours">hour</span>
+                            </p>
+
+                        </div>
+
+                        <div class=card-two>
+
+                            <p><span class="status">month</span>
+
+                                <br><span class="figure-month">120</span>
+
+                                <br><span class="hours">hour</span>
+                            </p>
+
+                        </div>
+
+                        <div class=card-three>
+
+                            <p><span class="status">total</span>
+
+                                <br><span class="figure-total">1348</span>
+
+                                <br><span class="hours">hour</span>
+                            </p>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+                <div class="graph">
+
+
+
+                </div>
+
+
+
+
+
+                <div class="right-side">
+
+                    <div class="graph-two"></div>
+
+                    <div class="graph-three"></div>
+
+
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-body">
+
+                                <div class="day-I-studied">
+                                    <h4>学習日</h4>
+                                </div>
+
+                                <div class="contents-studied">
+                                    <h4>学習コンテンツ</h4>
+                                </div>
+
+
+                                <div class="language-studied">
+                                    <h4>学習言語（複数選択可）</h4>
+                                </div>
+
+
+
+
+                                <div class="close-button-map">
+                                    <input type="button" id="closeBtn" value="×" class="close-button-design">
+                                </div>
+
+
+                                <div class="r-p-button-two-divided">
+                                    <input type="button" id="btn2" value="投稿" class="r-p-button-two">
+
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div id=modal2 class="modal-two">
+                        <div class="modal-content-two">
+                            <div class="modal-body-two">
+                                <div class="record-completed">
+                                    <p>記録完了</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="under">
+                        <p>2020年11月13日</p>
+
+                    </div>
+
+
+
+
+                    <div class="r-p-button-divided">
+                        <input type="button" id="btn" value='記録' class="r-p-button">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="Indie production.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</body>
+
+</html>
